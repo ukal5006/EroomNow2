@@ -1,17 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { GlobalStyle } from './stlyes/GlobalStyle';
+
+const AppContainer = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-color: tomato;
+`;
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-            </header>
-        </div>
+        <>
+            <GlobalStyle />
+            <AppContainer></AppContainer>
+        </>
     );
 }
 
