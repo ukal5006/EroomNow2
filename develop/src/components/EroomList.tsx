@@ -50,9 +50,6 @@ const LoaderText = styled.div`
 
 const EroomListWrapper = styled.div`
     width: 350px;
-    & > div {
-        margin-top: 10px;
-    }
 `;
 
 function EroomList({ userLocation }: LocationProps) {
