@@ -5,6 +5,7 @@ import { distance } from '../tools/distance';
 import useAxios from '../hooks/useAxios';
 import { EROOMLIST } from '../constants/api';
 import EroomItem from './EroomItem';
+import styled from 'styled-components';
 
 interface LocationProps {
     userLocation: UserLocation;
@@ -32,8 +33,15 @@ interface EroomResponse {
     };
 }
 
+const EroomListWrapper = styled.div`
+    width: 350px;
+    & > div {
+        margin-top: 10px;
+    }
+`;
+
 function EroomList({ userLocation }: LocationProps) {
-    const [maxDistance, setMaxDistance] = useState(10);
+    const [maxDistance, setMaxDistance] = useState(20);
     const [distanceEroomList, setDistanceEroomList] = useState<null | DistanceEroomInfo[]>(null);
     const [nowEroomList, setNowEroomList] = useState<null | NowEroomInfo[]>(null);
     const [filtedEroomList, setFiltedEroomList] = useState<null | NowEroomInfo[]>(null);
@@ -91,11 +99,11 @@ function EroomList({ userLocation }: LocationProps) {
     }, [error]);
 
     return (
-        <>
+        <EroomListWrapper>
             {filtedEroomList?.length == null
                 ? '로딩중'
                 : filtedEroomList.map((e) => <EroomItem key={e.hpid} eroomInfo={e} />)}
-        </>
+        </EroomListWrapper>
     );
 }
 
