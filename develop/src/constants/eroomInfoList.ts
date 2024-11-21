@@ -1,5 +1,5 @@
 // 2024년11월21일 기준 전국 응급기관 기본 정보 총 12개
-interface EroomInfo {
+export interface EroomInfo {
     dutyName: string; // 응급실 이름
     hpid: string; // 병원ID
     lat: number; // 위도
