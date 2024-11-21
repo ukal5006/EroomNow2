@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { GlobalStyle } from './stlyes/GlobalStyle';
+import Location from './components/Location';
+import { GlobalStyle } from './styles/GlobalStyle';
 
 const AppContainer = styled.div`
     width: 100vw;
@@ -11,7 +12,9 @@ function App() {
     return (
         <>
             <GlobalStyle />
-            <AppContainer></AppContainer>
+            <AppContainer>
+                <Location />
+            </AppContainer>
         </>
     );
 }
