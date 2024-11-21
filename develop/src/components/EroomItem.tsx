@@ -21,7 +21,7 @@ const EroomName = styled.div`
 
 const EroomCount = styled.div<{ hvec: number }>`
     color: white;
-    width: 30px;
+    width: 40px;
     height: 30px;
     display: flex;
     justify-content: center;
