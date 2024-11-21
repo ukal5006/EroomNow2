@@ -6,6 +6,7 @@ import useAxios from '../hooks/useAxios';
 import { EROOMLIST } from '../constants/api';
 import EroomItem from './EroomItem';
 import styled from 'styled-components';
+import Spinner from './Spinner';
 
 interface LocationProps {
     userLocation: UserLocation;
@@ -33,6 +34,20 @@ interface EroomResponse {
     };
 }
 
+const LoaderContainer = styled.div`
+    width: 100vw;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+const LoaderText = styled.div`
+    font-size: 20px;
+    margin-bottom: 10px;
+`;
+
 const EroomListWrapper = styled.div`
     width: 350px;
     & > div {
@@ -45,7 +60,7 @@ function EroomList({ userLocation }: LocationProps) {
     const [distanceEroomList, setDistanceEroomList] = useState<null | DistanceEroomInfo[]>(null);
     const [nowEroomList, setNowEroomList] = useState<null | NowEroomInfo[]>(null);
     const [filtedEroomList, setFiltedEroomList] = useState<null | NowEroomInfo[]>(null);
-    const { data, loading, error } = useAxios<EroomResponse>({ url: EROOMLIST });
+    const { data, error } = useAxios<EroomResponse>({ url: EROOMLIST });
 
     // 응급실 기본 정보에 사용자와의 거리 추가
     useEffect(() => {
@@ -98,11 +113,16 @@ function EroomList({ userLocation }: LocationProps) {
         }
     }, [error]);
 
-    return (
+    return filtedEroomList?.length == null ? (
+        <LoaderContainer>
+            <LoaderText>응급실 정보를 불러오고 있습니다.</LoaderText>
+            <Spinner />
+        </LoaderContainer>
+    ) : (
         <EroomListWrapper>
-            {filtedEroomList?.length == null
-                ? '로딩중'
-                : filtedEroomList.map((e) => <EroomItem key={e.hpid} eroomInfo={e} />)}
+            {filtedEroomList.map((e) => (
+                <EroomItem key={e.hpid} eroomInfo={e} />
+            ))}
         </EroomListWrapper>
     );
 }
