@@ -22,7 +22,7 @@ function Location({ userLocation }: LocationProps) {
                     const address = result[0].address.address_name;
                     setAddress(address);
                 } else {
-                    // setError('주소를 가져오는 데 실패했습니다.');
+                    alert('주소를 가져오는 데 실패했습니다.');
                 }
             });
         }
