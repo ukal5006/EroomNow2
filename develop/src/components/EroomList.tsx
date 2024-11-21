@@ -4,6 +4,7 @@ import { UserLocation } from '../App';
 import { distance } from '../tools/distance';
 import useAxios from '../hooks/useAxios';
 import { EROOMLIST } from '../constants/api';
+import EroomItem from './EroomItem';
 
 interface LocationProps {
     userLocation: UserLocation;
@@ -13,7 +14,7 @@ interface DistanceEroomInfo extends EroomInfo {
     distance: number;
 }
 
-interface NowEroomInfo extends DistanceEroomInfo {
+export interface NowEroomInfo extends DistanceEroomInfo {
     hvidate: string;
     hvec: number;
 }
@@ -75,7 +76,11 @@ function EroomList({ userLocation }: LocationProps) {
     // 사용자와의 거리에 따라 필터링 초기값 10
     useEffect(() => {
         if (nowEroomList) {
-            setFiltedEroomList(nowEroomList.filter((nowEroomInfo) => nowEroomInfo.distance < maxDistance));
+            setFiltedEroomList(
+                nowEroomList
+                    .filter((nowEroomInfo) => nowEroomInfo.distance < maxDistance)
+                    .sort((a, b) => a.distance - b.distance)
+            );
         }
     }, [nowEroomList, maxDistance]);
 
@@ -85,7 +90,13 @@ function EroomList({ userLocation }: LocationProps) {
         }
     }, [error]);
 
-    return <></>;
+    return (
+        <>
+            {filtedEroomList?.length == null
+                ? '로딩중'
+                : filtedEroomList.map((e) => <EroomItem key={e.hpid} eroomInfo={e} />)}
+        </>
+    );
 }
 
 export default EroomList;
