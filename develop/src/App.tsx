@@ -11,8 +11,12 @@ export interface UserLocation {
 
 const AppContainer = styled.div`
     width: 100vw;
-    height: 100vh;
-    background-color: tomato;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
 `;
 
 function App() {
@@ -52,8 +56,14 @@ function App() {
         <>
             <GlobalStyle />
             <AppContainer>
-                {userLocation ? <Location userLocation={userLocation} /> : <></>}
-                <EroomList />
+                {userLocation ? (
+                    <>
+                        <Location userLocation={userLocation} />
+                        <EroomList userLocation={userLocation} />
+                    </>
+                ) : (
+                    <></>
+                )}
             </AppContainer>
         </>
     );
