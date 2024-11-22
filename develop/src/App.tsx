@@ -11,6 +11,7 @@ export interface UserLocation {
 
 const AppContainer = styled.div`
     width: 100vw;
+    max-width: 800px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -52,6 +53,7 @@ function App() {
     useEffect(() => {
         getUserLocation();
     }, []);
+
     return (
         <>
             <GlobalStyle />
