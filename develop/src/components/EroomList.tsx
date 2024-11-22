@@ -79,6 +79,14 @@ const RefreshBtn = styled.div`
     font-size: 20px;
     border-radius: 10px;
     cursor: pointer;
+    margin-bottom: 10px;
+`;
+
+const DataUpdateTime = styled.div`
+    font-size: 12px;
+    color: gray;
+    display: flex;
+    justify-content: end;
 `;
 
 function EroomList({ userLocation }: LocationProps) {
@@ -161,8 +169,8 @@ function EroomList({ userLocation }: LocationProps) {
                     15km
                 </DistanceBtn>
             </DistanceBtnContainer>
-            <div>데이터 업데이트 시각 : {requestTime}</div>
             <RefreshBtn onClick={refetch}>응급실 리스트 새로고침</RefreshBtn>
+            <DataUpdateTime>데이터 업데이트 시각 : {requestTime}</DataUpdateTime>
 
             {filtedEroomList.map((e) => (
                 <EroomItem key={e.hpid} eroomInfo={e} userLocation={userLocation} />
