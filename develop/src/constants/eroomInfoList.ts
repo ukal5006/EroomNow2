@@ -289,7 +289,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 126.79116743230001,
     },
     {
-        dutyName: '가톨릭대학교부천성모병원',
+        dutyName: '부천성모병원',
         dutyTel3: '032-340-2100',
         hpid: 'A2100052',
         lat: 37.4874477394264,
@@ -394,7 +394,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 127.0343637912553,
     },
     {
-        dutyName: '가톨릭대학교성빈센트병원',
+        dutyName: '성빈센트병원',
         dutyTel3: '031-249-7370',
         hpid: 'A2100012',
         lat: 37.27792234538125,
@@ -562,7 +562,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 127.050695679688,
     },
     {
-        dutyName: '가톨릭대학교의정부성모병원',
+        dutyName: '의정부성모병원',
         dutyTel3: '031-820-5200',
         hpid: 'A2100040',
         lat: 37.75865547828227,
@@ -1346,7 +1346,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 128.62383509209542,
     },
     {
-        dutyName: '대구가톨릭대학교칠곡가톨릭병원',
+        dutyName: '칠곡가톨릭병원',
         dutyTel3: '053-320-2111',
         hpid: 'A1300005',
         lat: 35.934879518784534,
@@ -1437,7 +1437,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 127.32491359339663,
     },
     {
-        dutyName: '가톨릭대학교대전성모병원',
+        dutyName: '대전성모병원',
         dutyTel3: '042-220-9118',
         hpid: 'A1600005',
         lat: 36.32302490017959,
@@ -1836,7 +1836,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 126.93658306608872,
     },
     {
-        dutyName: '가톨릭대학교서울성모병원',
+        dutyName: '서울성모병원',
         dutyTel3: '02-2258-2370',
         hpid: 'A1100012',
         lat: 37.501800804785276,
@@ -1892,7 +1892,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 126.8862159683056,
     },
     {
-        dutyName: '가톨릭대학교여의도성모병원',
+        dutyName: '여의도성모병원',
         dutyTel3: '02-3779-1188',
         hpid: 'A1100011',
         lat: 37.51827233800711,
@@ -1927,14 +1927,14 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 126.92236733617031,
     },
     {
-        dutyName: '순천향대학교  서울병원',
+        dutyName: '순천향대학교 서울병원',
         dutyTel3: '02-709-9117',
         hpid: 'A1100004',
         lat: 37.53384172231443,
         lon: 127.00441798640304,
     },
     {
-        dutyName: '가톨릭대학교은평성모병원',
+        dutyName: '은평성모병원',
         dutyTel3: '02-1811-7755',
         hpid: 'A1121013',
         lat: 37.633608409726854,
@@ -2130,7 +2130,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 126.680345104401,
     },
     {
-        dutyName: '가톨릭대학교 인천성모병원',
+        dutyName: '인천성모병원',
         dutyTel3: '032-280-6107',
         hpid: 'A1400012',
         lat: 37.4845586499062,
@@ -2144,7 +2144,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 126.71994675790395,
     },
     {
-        dutyName: '가톨릭관동대학교국제성모병원',
+        dutyName: '국제성모병원',
         dutyTel3: '032-290-3065',
         hpid: 'A1400015',
         lat: 37.542372653918065,
@@ -2739,7 +2739,7 @@ export const eroomInfoList: EroomInfo[] = [
         lon: 127.17327537305154,
     },
     {
-        dutyName: '순천향대학교부속천안병원',
+        dutyName: '순천향대학교천안병원',
         dutyTel3: '041-590-7019',
         hpid: 'A2400001',
         lat: 36.8023584971179,
