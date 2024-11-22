@@ -112,6 +112,7 @@ const ModalContent = styled.div`
 `;
 
 const ContentContext = styled.div`
+    font-size: 18px;
     & > div {
         margin-top: 10px;
     }
@@ -132,6 +133,8 @@ const Distance = styled.div``;
 const Count = styled.div``;
 
 const Tel = styled.div``;
+
+const CallBtn = styled.a``;
 
 const UpdateTime = styled.div`
     font-size: 12px;
@@ -188,8 +191,11 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
                                 <Name>{eroomInfo.dutyName}</Name>
                                 <Address>{eroomInfo.dutyAddr}</Address>
                                 <Distance>{Math.round(eroomInfo.distance * 100) / 100}km</Distance>
+                                <Tel>
+                                    전화번호 : {eroomInfo.dutyTel3}{' '}
+                                    <CallBtn href={`tel:${eroomInfo.dutyTel3}`}>📞</CallBtn>
+                                </Tel>
                                 <Count>가용 침상 수 : {eroomInfo.hvec}</Count>
-                                <Tel>전화번호 : {eroomInfo.dutyTel3}</Tel>
                                 <UpdateTime>업데이트 시간 : {formatDateTime(eroomInfo.hvidate.toString())}</UpdateTime>
                             </ContentContext>
                         </ModalContent>
