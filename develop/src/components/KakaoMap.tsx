@@ -10,8 +10,10 @@ interface KakaoMapProps {
 }
 
 const MapWrapper = styled.div`
+    margin-top: 10px;
     width: 100%;
     height: 400px;
+    border-radius: 10px;
 `;
 
 function KakaoMap({ userLocation, eroomInfo }: KakaoMapProps) {
