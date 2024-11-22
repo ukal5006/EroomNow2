@@ -18,6 +18,7 @@ const AppContainer = styled.div`
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
+    margin: 0px auto;
 `;
 
 function App() {
