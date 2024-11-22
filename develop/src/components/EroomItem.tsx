@@ -111,7 +111,32 @@ const ModalContent = styled.div`
     width: 100%;
 `;
 
-const ContentContext = styled.div``;
+const ContentContext = styled.div`
+    & > div {
+        margin-top: 10px;
+    }
+`;
+
+const Name = styled.div`
+    font-size: 20px;
+    font-weight: bold;
+`;
+
+const Address = styled.div`
+    font-size: 12px;
+    color: gray;
+`;
+
+const Distance = styled.div``;
+
+const Count = styled.div``;
+
+const Tel = styled.div``;
+
+const UpdateTime = styled.div`
+    font-size: 12px;
+    color: gray;
+`;
 
 function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -150,13 +175,6 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
                     <ModalWrapper>
                         <CloseButton onClick={handleCloseModal}>x</CloseButton>
                         <ModalContent>
-                            <ContentContext>이름 : {eroomInfo.dutyName}</ContentContext>
-                            <ContentContext>가용 침상 수 : {eroomInfo.hvec}</ContentContext>
-                            <ContentContext>거리 : {Math.round(eroomInfo.distance * 100) / 100}km</ContentContext>
-                            <ContentContext>전화번호 : {eroomInfo.dutyTel3}</ContentContext>
-                            <ContentContext>
-                                업데이트 시간 : {formatDateTime(eroomInfo.hvidate.toString())}
-                            </ContentContext>
                             <KakaoMap
                                 userLocation={userLocation}
                                 eroomInfo={{
@@ -166,6 +184,14 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
                                     name: eroomInfo.dutyName,
                                 }}
                             />
+                            <ContentContext>
+                                <Name>{eroomInfo.dutyName}</Name>
+                                <Address>{eroomInfo.dutyAddr}</Address>
+                                <Distance>{Math.round(eroomInfo.distance * 100) / 100}km</Distance>
+                                <Count>가용 침상 수 : {eroomInfo.hvec}</Count>
+                                <Tel>전화번호 : {eroomInfo.dutyTel3}</Tel>
+                                <UpdateTime>업데이트 시간 : {formatDateTime(eroomInfo.hvidate.toString())}</UpdateTime>
+                            </ContentContext>
                         </ModalContent>
                     </ModalWrapper>
                 </ModalOverlay>
