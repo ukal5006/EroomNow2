@@ -118,7 +118,7 @@ function EroomList({ userLocation }: LocationProps) {
     ) : (
         <EroomListWrapper>
             {filtedEroomList.map((e) => (
-                <EroomItem key={e.hpid} eroomInfo={e} />
+                <EroomItem key={e.hpid} eroomInfo={e} userLocation={userLocation} />
             ))}
         </EroomListWrapper>
     );

@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { NowEroomInfo } from './EroomList';
 import { formatDateTime } from '../tools/formatDateTime';
+import KakaoMap from './KakaoMap';
+import { UserLocation } from '../App';
 
 interface EroomItemProps {
     eroomInfo: NowEroomInfo;
+    userLocation: UserLocation;
 }
 
 const EroomItemContainer = styled.div`
@@ -82,7 +85,6 @@ const ModalWrapper = styled.div`
     box-sizing: border-box;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 90%;
-    height: 300px;
 `;
 
 const CloseButton = styled.button`
@@ -106,9 +108,12 @@ const ModalContent = styled.div`
     padding: 10px;
     box-sizing: border-box;
     margin-top: 10px;
+    width: 100%;
 `;
 
-function EroomItem({ eroomInfo }: EroomItemProps) {
+const ContentContext = styled.div``;
+
+function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = () => {
@@ -145,10 +150,22 @@ function EroomItem({ eroomInfo }: EroomItemProps) {
                     <ModalWrapper>
                         <CloseButton onClick={handleCloseModal}>x</CloseButton>
                         <ModalContent>
-                            <h2>응급실 이름 : {eroomInfo.dutyName}</h2>
-                            <p>가용 침상 수 : {eroomInfo.hvec}</p>
-                            <p>업데이트 시간 : {formatDateTime(eroomInfo.hvidate.toString())}</p>
-                            <p>거리: {Math.round(eroomInfo.distance * 100) / 100}km</p>
+                            <ContentContext>이름 : {eroomInfo.dutyName}</ContentContext>
+                            <ContentContext>가용 침상 수 : {eroomInfo.hvec}</ContentContext>
+                            <ContentContext>거리 : {Math.round(eroomInfo.distance * 100) / 100}km</ContentContext>
+                            <ContentContext>전화번호 : {eroomInfo.dutyTel3}</ContentContext>
+                            <ContentContext>
+                                업데이트 시간 : {formatDateTime(eroomInfo.hvidate.toString())}
+                            </ContentContext>
+                            <KakaoMap
+                                userLocation={userLocation}
+                                eroomInfo={{
+                                    lat: eroomInfo.lat,
+                                    lon: eroomInfo.lon,
+                                    distance: eroomInfo.distance,
+                                    name: eroomInfo.dutyName,
+                                }}
+                            />
                         </ModalContent>
                     </ModalWrapper>
                 </ModalOverlay>
