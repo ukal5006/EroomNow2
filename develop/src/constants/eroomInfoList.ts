@@ -1,10 +1,11 @@
-// 2024년11월21일 기준 전국 응급기관 기본 정보 총 12개
+// 2024년11월21일 기준 전국 응급기관 기본 정보 총 412개
 export interface EroomInfo {
     dutyName: string; // 응급실 이름
     hpid: string; // 병원ID
     lat: number; // 위도
     lon: number; // 경도
     dutyTel3: string; // 전화번호
+    dutyAddr: string; // 주소
 }
 
 export const eroomInfoList: EroomInfo[] = [
@@ -14,6 +15,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200005',
         lat: 37.77432579461282,
         lon: 128.90714180258507,
+        dutyAddr: '강원특별자치도 강릉시 강릉대로419번길 42 (포남동)',
     },
     {
         dutyName: '강릉의료원',
@@ -21,6 +23,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200011',
         lat: 37.74931042017154,
         lon: 128.8887963251862,
+        dutyAddr: '강원특별자치도 강릉시 경강로 2007 (남문동)',
     },
     {
         dutyName: '강릉아산병원',
@@ -28,6 +31,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200008',
         lat: 37.818426685036066,
         lon: 128.85771413305145,
+        dutyAddr: '강원특별자치도 강릉시 사천면 방동길 38',
     },
     {
         dutyName: '동해병원',
@@ -35,6 +39,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200038',
         lat: 37.53232311891651,
         lon: 129.1058560226859,
+        dutyAddr: '강원특별자치도 동해시 하평로 11-  (평릉동, (평릉동))',
     },
     {
         dutyName: '동해동인병원',
@@ -42,6 +47,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200003',
         lat: 37.530006805605616,
         lon: 129.1074043067605,
+        dutyAddr: '강원특별자치도 동해시 하평로 26-  (평릉동, (평릉동))',
     },
     {
         dutyName: '삼척의료원',
@@ -49,6 +55,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200007',
         lat: 37.44027922704624,
         lon: 129.16370014395005,
+        dutyAddr: '강원특별자치도 삼척시 오십천로 418 (남양동)',
     },
     {
         dutyName: '속초의료원',
@@ -56,6 +63,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200012',
         lat: 38.21622784728713,
         lon: 128.5891194514502,
+        dutyAddr: '강원특별자치도 속초시 영랑호반길 3 (영랑동)',
     },
     {
         dutyName: '속초보광병원',
@@ -63,6 +71,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200046',
         lat: 38.198021245336555,
         lon: 128.57838660480326,
+        dutyAddr: '강원특별자치도 속초시 중앙로 11 (교동)',
     },
     {
         dutyName: '양구성심병원',
@@ -70,6 +79,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200037',
         lat: 38.1047788862656,
         lon: 127.99119726275,
+        dutyAddr: '강원특별자치도 양구군 양구읍 중심로 160',
     },
     {
         dutyName: '영월의료원',
@@ -77,6 +87,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200002',
         lat: 37.186588403987926,
         lon: 128.46530529870284,
+        dutyAddr: '강원특별자치도 영월군 영월읍 중앙1로 59-  ( )',
     },
     {
         dutyName: '원주의료원',
@@ -84,6 +95,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200015',
         lat: 37.332496031537154,
         lon: 127.94896203327231,
+        dutyAddr: '강원특별자치도 원주시 서원대로 387 (개운동, 지방공사강원도원주의료원)',
     },
     {
         dutyName: '성지병원',
@@ -91,6 +103,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200024',
         lat: 37.3452989790958,
         lon: 127.954009227598,
+        dutyAddr: '강원특별자치도 원주시 원일로 22 (인동)',
     },
     {
         dutyName: '원주세브란스병원',
@@ -98,6 +111,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200001',
         lat: 37.34795543031888,
         lon: 127.9456453098751,
+        dutyAddr: '강원특별자치도 원주시 일산로 20 (일산동)',
     },
     {
         dutyName: '정선병원',
@@ -105,6 +119,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200048',
         lat: 37.3829238141538,
         lon: 128.658420530712,
+        dutyAddr: '강원특별자치도 정선군 정선읍 봉양1길 145',
     },
     {
         dutyName: '철원병원',
@@ -112,6 +127,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2201730',
         lat: 38.15033057072112,
         lon: 127.30802768817259,
+        dutyAddr: '강원특별자치도 철원군 갈말읍 명성로 208-0',
     },
     {
         dutyName: '강원대학교병원',
@@ -119,6 +135,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200009',
         lat: 37.87497158192399,
         lon: 127.74448573764938,
+        dutyAddr: '강원특별자치도 춘천시 백령로 156 (효자동)',
     },
     {
         dutyName: '춘천성심병원',
@@ -126,6 +143,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200013',
         lat: 37.88413581388737,
         lon: 127.73989454269613,
+        dutyAddr: '강원특별자치도 춘천시 삭주로 77 (교동)',
     },
     {
         dutyName: '태백병원',
@@ -133,6 +151,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200004',
         lat: 37.10404228529155,
         lon: 129.0042870499601,
+        dutyAddr: '강원특별자치도 태백시 보드미길 8 (장성동)',
     },
     {
         dutyName: '평창군보건의료원',
@@ -140,6 +159,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2200026',
         lat: 37.360577433652736,
         lon: 128.3890508672411,
+        dutyAddr: '강원특별자치도 평창군 평창읍 노성로 11',
     },
     {
         dutyName: '홍천아산병원',
@@ -147,6 +167,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200014',
         lat: 37.69082165229579,
         lon: 127.89490721695594,
+        dutyAddr: '강원특별자치도 홍천군 홍천읍 산림공원1길 17',
     },
     {
         dutyName: '화천군보건의료원',
@@ -154,6 +175,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2200025',
         lat: 38.1073824571151,
         lon: 127.708883438378,
+        dutyAddr: '강원특별자치도 화천군 화천읍 강변로 111 (화천군보건의료원)',
     },
     {
         dutyName: '횡성대성병원',
@@ -161,6 +183,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2200016',
         lat: 37.47845901170136,
         lon: 127.97994775890871,
+        dutyAddr: '강원특별자치도 횡성군 횡성읍 횡성로 275',
     },
     {
         dutyName: '명지병원',
@@ -168,6 +191,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100042',
         lat: 37.64207169115689,
         lon: 126.83145733035825,
+        dutyAddr: '경기도 고양시 덕양구 화수로14번길 55 (화정동)',
     },
     {
         dutyName: '동국대학교일산병원',
@@ -175,6 +199,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100047',
         lat: 37.67643677699999,
         lon: 126.8055658392,
+        dutyAddr: '경기도 고양시 일산동구 동국로 27 (식사동, 동국대학교일산병원)',
     },
     {
         dutyName: '국민건강보험일산병원',
@@ -182,6 +207,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100033',
         lat: 37.64530592402248,
         lon: 126.792204040477,
+        dutyAddr: '경기도 고양시 일산동구 일산로 100 (백석동,백석1동 1241외1필지 4층)',
     },
     {
         dutyName: '국립암센터',
@@ -189,6 +215,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100049',
         lat: 37.664170778165285,
         lon: 126.78327945120733,
+        dutyAddr: '경기도 고양시 일산동구 일산로 323 (마두동)',
     },
     {
         dutyName: '일산차병원',
@@ -196,6 +223,8 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2116972',
         lat: 37.65413326289407,
         lon: 126.77574306091104,
+        dutyAddr:
+            '경기도 고양시 일산동구 중앙로 1205, 지하1층(일부),지하2층,지하4층(일부),1층(일부),2층(일부),3층(일부),4~5층,6층(일부), 7~10층 (장항동)',
     },
     {
         dutyName: '인제대학교백병원',
@@ -203,6 +232,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100038',
         lat: 37.67436543525074,
         lon: 126.75031388046008,
+        dutyAddr: '경기도 고양시 일산서구 주화로 170 (대화동)',
     },
     {
         dutyName: '중앙대학교광명병원',
@@ -210,6 +240,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2118788',
         lat: 37.4245974351169,
         lon: 126.885910072451,
+        dutyAddr: '경기도 광명시 덕안로 110(일직동)',
     },
     {
         dutyName: '광명성애병원',
@@ -217,6 +248,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100007',
         lat: 37.4734614743463,
         lon: 126.87192258470483,
+        dutyAddr: '경기도 광명시 디지털로 36, 광명성애병원 (철산동)',
     },
     {
         dutyName: '참조은병원',
@@ -224,6 +256,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100155',
         lat: 37.41095382720454,
         lon: 127.26022384023878,
+        dutyAddr: '경기도 광주시 광주대로 45 (경안동)',
     },
     {
         dutyName: '한양대학교구리병원',
@@ -231,6 +264,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100039',
         lat: 37.6012760077,
         lon: 127.13250756940002,
+        dutyAddr: '경기도 구리시 경춘로 153 (교문동)',
     },
     {
         dutyName: '지샘병원',
@@ -238,6 +272,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100054',
         lat: 37.35864464913468,
         lon: 126.94735972779895,
+        dutyAddr: '경기도 군포시 군포로 591 (당동, (G샘병원)군포샘병원)',
     },
     {
         dutyName: '원광대학교산본병원',
@@ -245,6 +280,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100048',
         lat: 37.359787179442414,
         lon: 126.93330716393871,
+        dutyAddr: '경기도 군포시 산본로 321 (산본동)',
     },
     {
         dutyName: '김포우리병원',
@@ -252,6 +288,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100053',
         lat: 37.632530143647166,
         lon: 126.7105272263707,
+        dutyAddr: '경기도 김포시 감암로 11, 김포우리병원 (걸포동)',
     },
     {
         dutyName: '뉴고려병원',
@@ -259,6 +296,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100006',
         lat: 37.64095507933562,
         lon: 126.66022763544733,
+        dutyAddr: '경기도 김포시 김포한강3로 283, 뉴고려병원 (장기동)',
     },
     {
         dutyName: '남양주한양병원',
@@ -266,6 +304,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100041',
         lat: 37.682380941575715,
         lon: 127.2043136287129,
+        dutyAddr: '경기도 남양주시 오남읍 양지로 47-55',
     },
     {
         dutyName: '현대병원',
@@ -273,6 +312,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100037',
         lat: 37.715486551355895,
         lon: 127.17984989970033,
+        dutyAddr: '경기도 남양주시 진접읍 봉현로 21',
     },
     {
         dutyName: '엘병원',
@@ -280,6 +320,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2118188',
         lat: 37.6487334911668,
         lon: 127.141048740049,
+        dutyAddr: '경기도 남양주시 퇴계원읍 퇴계원로 20, 지하2~지상7층 일부제외호',
     },
     {
         dutyName: '부천세종병원',
@@ -287,6 +328,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100055',
         lat: 37.4810049006,
         lon: 126.79116743230001,
+        dutyAddr: '경기도 부천시 소사구 호현로489번길 28 (소사본동, 세종병원)',
     },
     {
         dutyName: '부천성모병원',
@@ -294,6 +336,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100052',
         lat: 37.4874477394264,
         lon: 126.79243459154999,
+        dutyAddr: '경기도 부천시 원미구 소사로 327, 가톨릭대학교 부천성모병원 (소사동)',
     },
     {
         dutyName: '순천향대학교부천병원',
@@ -301,6 +344,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100005',
         lat: 37.49857073407877,
         lon: 126.76238239812001,
+        dutyAddr: '경기도 부천시 원미구 조마루로 170 (중동)',
     },
     {
         dutyName: '다니엘종합병원',
@@ -308,6 +352,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100050',
         lat: 37.512321557883574,
         lon: 126.76948894065183,
+        dutyAddr: '경기도 부천시 원미구 중동로 361, 다니엘종합병원 (약대동)',
     },
     {
         dutyName: '분당서울대학교병원',
@@ -315,6 +360,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100001',
         lat: 37.35202597297615,
         lon: 127.12448354572743,
+        dutyAddr: '경기도 성남시 분당구 구미로173번길 82 (구미동, 분당서울대학교병원)',
     },
     {
         dutyName: '국군수도병원',
@@ -322,6 +368,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100258',
         lat: 37.39186666666668,
         lon: 127.14858611111111,
+        dutyAddr: '경기도 성남시 분당구 새마을로177번길 81 (율동)',
     },
     {
         dutyName: '분당제생병원',
@@ -329,6 +376,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100025',
         lat: 37.387871379956906,
         lon: 127.12132819639598,
+        dutyAddr: '경기도 성남시 분당구 서현로180번길 20 (서현동)',
     },
     {
         dutyName: '차의과학대학교분당차병원',
@@ -336,6 +384,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100030',
         lat: 37.4101145912911,
         lon: 127.125083678928,
+        dutyAddr: '경기도 성남시 분당구 야탑로 59 (야탑동)',
     },
     {
         dutyName: '성남정병원',
@@ -343,6 +392,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100016',
         lat: 37.43962497395649,
         lon: 127.12863916535001,
+        dutyAddr: '경기도 성남시 수정구 수정로 76, 지하3~10층 (수진동)',
     },
     {
         dutyName: '성남시의료원',
@@ -350,6 +400,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2116806',
         lat: 37.44498428779224,
         lon: 127.13905704599767,
+        dutyAddr: '경기도 성남시 수정구 수정로171번길 10, 성남시의료원 (태평동)',
     },
     {
         dutyName: '성남중앙병원',
@@ -357,6 +408,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100011',
         lat: 37.4528032109466,
         lon: 127.16209535008764,
+        dutyAddr: '경기도 성남시 중원구 산성대로476번길 12 (금광동)',
     },
     {
         dutyName: '화홍병원',
@@ -364,6 +416,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2117135',
         lat: 37.2601427452511,
         lon: 126.963891671858,
+        dutyAddr: '경기도 수원시 권선구 호매실로90번길 98 (호매실동)',
     },
     {
         dutyName: '아주대학교병원',
@@ -371,6 +424,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100002',
         lat: 37.2794477573662,
         lon: 127.04752107106702,
+        dutyAddr: '경기도 수원시 영통구 월드컵로 164 (원천동)',
     },
     {
         dutyName: '경기도의료원수원병원',
@@ -378,6 +432,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100032',
         lat: 37.29188165276277,
         lon: 126.99638776108885,
+        dutyAddr: '경기도 수원시 장안구 수성로245번길 69 (정자동)',
     },
     {
         dutyName: '윌스기념병원',
@@ -385,6 +440,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100175',
         lat: 37.26502978126203,
         lon: 127.0254583588438,
+        dutyAddr: '경기도 수원시 팔달구 경수대로 437 (인계동)',
     },
     {
         dutyName: '동수원병원',
@@ -392,6 +448,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100009',
         lat: 37.27816562305189,
         lon: 127.0343637912553,
+        dutyAddr: '경기도 수원시 팔달구 중부대로 165 (우만동)',
     },
     {
         dutyName: '성빈센트병원',
@@ -399,6 +456,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100012',
         lat: 37.27792234538125,
         lon: 127.02744945028702,
+        dutyAddr: '경기도 수원시 팔달구 중부대로 93 (지동)',
     },
     {
         dutyName: '센트럴병원',
@@ -406,6 +464,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100027',
         lat: 37.336409472880064,
         lon: 126.72768862827667,
+        dutyAddr: '경기도 시흥시 공단1대로 237 (정왕동, 센트럴 병원)',
     },
     {
         dutyName: '시화병원',
@@ -413,6 +472,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100008',
         lat: 37.349955639806,
         lon: 126.736970968751,
+        dutyAddr: '경기도 시흥시 군자천로 381, 시화병원 (정왕동)',
     },
     {
         dutyName: '신천연합병원',
@@ -420,6 +480,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100013',
         lat: 37.44454605843136,
         lon: 126.78938385106555,
+        dutyAddr: '경기도 시흥시 복지로 57, 복지로 61, 2층 (대야동)',
     },
     {
         dutyName: '한도병원',
@@ -427,6 +488,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100017',
         lat: 37.334033447174896,
         lon: 126.80765584591039,
+        dutyAddr: '경기도 안산시 단원구 선부광장로 103 (선부동)',
     },
     {
         dutyName: '단원병원',
@@ -434,6 +496,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100021',
         lat: 37.3002188172703,
         lon: 126.81357021652913,
+        dutyAddr: '경기도 안산시 단원구 원포공원1로 20, 동의성단원병원 (초지동)',
     },
     {
         dutyName: '고려대학교안산병원',
@@ -441,6 +504,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100003',
         lat: 37.31885818300129,
         lon: 126.8250018362211,
+        dutyAddr: '경기도 안산시 단원구 적금로 123 (고잔동)',
     },
     {
         dutyName: '안산병원',
@@ -448,6 +512,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100014',
         lat: 37.31687107499767,
         lon: 126.87402848671928,
+        dutyAddr: '경기도 안산시 상록구 구룡로 87, 근로복지공단안산병원 (일동)',
     },
     {
         dutyName: '사랑의병원',
@@ -455,6 +520,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100124',
         lat: 37.327020396286656,
         lon: 126.84486352776976,
+        dutyAddr: '경기도 안산시 상록구 예술광장로 69, 사랑의병원(593-4번지/593-5번지) (성포동)',
     },
     {
         dutyName: '경기도의료원안성병원',
@@ -462,6 +528,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100045',
         lat: 37.01736702955601,
         lon: 127.26033944589187,
+        dutyAddr: '경기도 안성시 남파로 95, 경기도의료원 안성병원 (당왕동)',
     },
     {
         dutyName: '안성성모병원',
@@ -469,6 +536,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100305',
         lat: 37.00610345894585,
         lon: 127.2708442991513,
+        dutyAddr: '경기도 안성시 시장길 58 (서인동)',
     },
     {
         dutyName: '한림대학교성심병원',
@@ -476,6 +544,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100004',
         lat: 37.3916511961,
         lon: 126.9619708207,
+        dutyAddr: '경기도 안양시 동안구 관평로170번길 22 (평촌동)',
     },
     {
         dutyName: '안양샘병원',
@@ -483,6 +552,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100015',
         lat: 37.39340413136221,
         lon: 126.92447734066778,
+        dutyAddr: '경기도 안양시 만안구 삼덕로 9 (안양동, 안양샘병원)',
     },
     {
         dutyName: '양평병원',
@@ -490,6 +560,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100089',
         lat: 37.493962635485616,
         lon: 127.50347093330032,
+        dutyAddr: '경기도 양평군 양평읍 중앙로 129',
     },
     {
         dutyName: '세종여주병원',
@@ -497,6 +568,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100194',
         lat: 37.3013258027,
         lon: 127.6267201581,
+        dutyAddr: '경기도 여주시 청심로 39, 세종여주병원 (하동)',
     },
     {
         dutyName: '연천군보건의료원',
@@ -504,6 +576,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2100187',
         lat: 38.02374166666665,
         lon: 127.06124444444444,
+        dutyAddr: '경기도 연천군 전곡읍 은대성로 95',
     },
     {
         dutyName: '오산한국병원',
@@ -511,6 +584,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100024',
         lat: 37.14122844920573,
         lon: 127.07533756274843,
+        dutyAddr: '경기도 오산시 밀머리로1번길 16 (원동)',
     },
     {
         dutyName: '연세대학교의과대학용인세브란스병원',
@@ -518,6 +592,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100020',
         lat: 37.270775831978774,
         lon: 127.14818862464037,
+        dutyAddr: '경기도 용인시 기흥구 동백죽전대로 363 (중동)',
     },
     {
         dutyName: '강남병원',
@@ -525,6 +600,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100029',
         lat: 37.27377983891884,
         lon: 127.11140719951389,
+        dutyAddr: '경기도 용인시 기흥구 중부대로 411, 강남병원 (신갈동)',
     },
     {
         dutyName: '용인서울병원',
@@ -532,6 +608,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100122',
         lat: 37.240316373,
         lon: 127.2144914405,
+        dutyAddr: '경기도 용인시 처인구 고림로 81 (고림동)',
     },
     {
         dutyName: '명주병원',
@@ -539,6 +616,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2119056',
         lat: 37.235142740879226,
         lon: 127.2010438256969,
+        dutyAddr: '경기도 용인시 처인구 금령로39번길 8-6(김량장동)',
     },
     {
         dutyName: '다보스병원',
@@ -546,6 +624,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100019',
         lat: 37.234641294534285,
         lon: 127.21049868474802,
+        dutyAddr: '경기도 용인시 처인구 백옥대로1082번길 18, 다보스종합병원 (김량장동)',
     },
     {
         dutyName: '의정부백병원',
@@ -553,6 +632,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100034',
         lat: 37.74536735722315,
         lon: 127.06206709820381,
+        dutyAddr: '경기도 의정부시 금신로 322 (신곡동)',
     },
     {
         dutyName: '의정부을지대학교병원',
@@ -560,6 +640,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2117994',
         lat: 37.7518290378344,
         lon: 127.050695679688,
+        dutyAddr: '경기도 의정부시 동일로 712, 을지대학교 의정부캠퍼스 및 부속병원 (금오동)',
     },
     {
         dutyName: '의정부성모병원',
@@ -567,6 +648,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100040',
         lat: 37.75865547828227,
         lon: 127.07767290194454,
+        dutyAddr: '경기도 의정부시 천보로 271, 의정부성모병원 (금오동)',
     },
     {
         dutyName: '추병원',
@@ -574,6 +656,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100150',
         lat: 37.7499600932,
         lon: 127.0450970956,
+        dutyAddr: '경기도 의정부시 평화로 650 (의정부동)',
     },
     {
         dutyName: '경기도의료원의정부병원',
@@ -581,6 +664,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100043',
         lat: 37.74108830096243,
         lon: 127.04255485020957,
+        dutyAddr: '경기도 의정부시 흥선로 142 (의정부동)',
     },
     {
         dutyName: '경기도의료원이천병원',
@@ -588,6 +672,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100193',
         lat: 37.282694444444445,
         lon: 127.43266388888888,
+        dutyAddr: '경기도 이천시 경충대로 2742 (관고동)',
     },
     {
         dutyName: '메디인병원',
@@ -595,6 +680,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100131',
         lat: 37.75804616829998,
         lon: 126.7748532614,
+        dutyAddr: '경기도 파주시 금릉역로 190(금촌동)',
     },
     {
         dutyName: '경기도의료원파주병원',
@@ -602,6 +688,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100035',
         lat: 37.7548802103,
         lon: 126.779637936,
+        dutyAddr: '경기도 파주시 중앙로 207, 경기도립의료원파주병원 (금촌동)',
     },
     {
         dutyName: '박병원',
@@ -609,6 +696,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100309',
         lat: 37.0482647009,
         lon: 127.05700385749999,
+        dutyAddr: '경기도 평택시 송탄로 33 (장당동)',
     },
     {
         dutyName: '굿모닝병원',
@@ -616,6 +704,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100028',
         lat: 36.9905734199,
         lon: 127.120463688,
+        dutyAddr: '경기도 평택시 중앙로 338 (합정동)',
     },
     {
         dutyName: '박애병원',
@@ -623,6 +712,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100022',
         lat: 36.99308383421509,
         lon: 127.08907896026507,
+        dutyAddr: '경기도 평택시 평택2로20번길 3 (평택동)',
     },
     {
         dutyName: '평택성모병원',
@@ -630,6 +720,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2113246',
         lat: 37.008809910565546,
         lon: 127.07371568769604,
+        dutyAddr: '경기도 평택시 평택로 284 (세교동)',
     },
     {
         dutyName: ' 포천우리병원',
@@ -637,6 +728,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100036',
         lat: 37.827495913257785,
         lon: 127.1481437183119,
+        dutyAddr: '경기도 포천시 소흘읍 호국로 661',
     },
     {
         dutyName: '경기도의료원포천병원',
@@ -644,6 +736,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100031',
         lat: 37.903264018475866,
         lon: 127.1983186069986,
+        dutyAddr: '경기도 포천시 포천로 1648 (신읍동)',
     },
     {
         dutyName: '화성디에스병원',
@@ -651,6 +744,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2116761',
         lat: 37.19922971137399,
         lon: 126.82571090454118,
+        dutyAddr: '경기도 화성시 남양읍 시청로160번길 46-13, 1,3~8층',
     },
     {
         dutyName: '한림대학교동탄성심병원',
@@ -658,6 +752,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100046',
         lat: 37.216650193541184,
         lon: 127.08000809235827,
+        dutyAddr: '경기도 화성시 큰재봉길 7 (석우동)',
     },
     {
         dutyName: '화성중앙종합병원',
@@ -665,6 +760,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2100018',
         lat: 37.13118966594901,
         lon: 126.910365631779,
+        dutyAddr: '경기도 화성시 향남읍 발안로 5',
     },
     {
         dutyName: '원광종합병원',
@@ -672,6 +768,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2115699',
         lat: 37.2100621333,
         lon: 127.0080345889,
+        dutyAddr: '경기도 화성시 화산북로 21 (송산동)',
     },
     {
         dutyName: '거붕백병원',
@@ -679,6 +776,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800008',
         lat: 34.873675809023304,
         lon: 128.62605696825915,
+        dutyAddr: '경상남도 거제시 계룡로5길 14 (상동동)',
     },
     {
         dutyName: '대우병원',
@@ -686,6 +784,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800005',
         lat: 34.87222152119712,
         lon: 128.72216421007292,
+        dutyAddr: '경상남도 거제시 두모길 16 (두모동)',
     },
     {
         dutyName: '맑은샘병원',
@@ -693,6 +792,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800022',
         lat: 34.89793483097861,
         lon: 128.64371778461182,
+        dutyAddr: '경상남도 거제시 연초면 거제대로 4477',
     },
     {
         dutyName: '거창적십자병원',
@@ -700,6 +800,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800076',
         lat: 35.686801911628535,
         lon: 127.90877080146284,
+        dutyAddr: '경상남도 거창군 거창읍 중앙로 91',
     },
     {
         dutyName: '강병원',
@@ -707,6 +808,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800032',
         lat: 34.97415924940364,
         lon: 128.32528942283565,
+        dutyAddr: '경상남도 고성군 고성읍 중앙로 49',
     },
     {
         dutyName: '강일병원',
@@ -714,6 +816,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2803677',
         lat: 35.2567043538,
         lon: 128.869611099,
+        dutyAddr: '경상남도 김해시 가락로 359 (구산동)',
     },
     {
         dutyName: '조은금강병원',
@@ -721,6 +824,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800010',
         lat: 35.2623038386,
         lon: 128.8615781975,
+        dutyAddr: '경상남도 김해시 김해대로 1814-37 (삼계동)',
     },
     {
         dutyName: '갑을장유병원',
@@ -728,6 +832,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800014',
         lat: 35.208667155880995,
         lon: 128.80564300531228,
+        dutyAddr: '경상남도 김해시 장유로 167-13 (부곡동)',
     },
     {
         dutyName: '김해복음병원',
@@ -735,6 +840,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800006',
         lat: 35.2304897832,
         lon: 128.8935457971,
+        dutyAddr: '경상남도 김해시 활천로 33 (삼정동)',
     },
     {
         dutyName: ' 남해병원',
@@ -742,6 +848,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800094',
         lat: 34.84640603127717,
         lon: 127.89425156305387,
+        dutyAddr: '경상남도 남해군 남해읍 화전로 169',
     },
     {
         dutyName: '밀양윤병원',
@@ -749,6 +856,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800057',
         lat: 35.48468031922943,
         lon: 128.75564526263582,
+        dutyAddr: '경상남도 밀양시 삼문중앙로 32 (삼문동)',
     },
     {
         dutyName: ' 삼천포서울병원',
@@ -756,6 +864,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800068',
         lat: 34.93302179207928,
         lon: 128.08012015415227,
+        dutyAddr: '경상남도 사천시 남일로 33 (동금동)',
     },
     {
         dutyName: '삼천포제일병원',
@@ -763,6 +872,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800101',
         lat: 34.9375392862,
         lon: 128.0795128117,
+        dutyAddr: '경상남도 사천시 중앙로 136, 삼천포제일병원 (벌리동)',
     },
     {
         dutyName: '산청군보건의료원',
@@ -770,6 +880,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2800380',
         lat: 35.4160463200281,
         lon: 127.88419591621033,
+        dutyAddr: '경상남도 산청군 산청읍 중앙로 97',
     },
     {
         dutyName: '양산부산대학교병원',
@@ -777,6 +888,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800011',
         lat: 35.32781996751182,
         lon: 129.00588613550423,
+        dutyAddr: '경상남도 양산시 물금읍 금오로 20',
     },
     {
         dutyName: '의령병원',
@@ -784,6 +896,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800090',
         lat: 35.31860563079656,
         lon: 128.2586798056445,
+        dutyAddr: '경상남도 의령군 의령읍 의병로14길 10',
     },
     {
         dutyName: '경상국립대학교병원',
@@ -791,6 +904,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800001',
         lat: 35.176340165507916,
         lon: 128.09564813723503,
+        dutyAddr: '경상남도 진주시 강남로 79 &#40;칠암동&#41;',
     },
     {
         dutyName: '반도병원',
@@ -798,6 +912,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800084',
         lat: 35.19175352096591,
         lon: 128.08828232510143,
+        dutyAddr: '경상남도 진주시 남강로 701 (장대동)',
     },
     {
         dutyName: ' 진주고려병원',
@@ -805,6 +920,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800015',
         lat: 35.17849131749577,
         lon: 128.09223855742437,
+        dutyAddr: '경상남도 진주시 동진로 2 (칠암동, 진주고려병원)',
     },
     {
         dutyName: '한일병원',
@@ -812,6 +928,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800043',
         lat: 35.16696519825003,
         lon: 128.128547657113,
+        dutyAddr: '경상남도 진주시 범골로 17, 한일병원 지하1 1~7층 (충무공동)',
     },
     {
         dutyName: '진주복음병원',
@@ -819,6 +936,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800037',
         lat: 35.185376569664825,
         lon: 128.06939115519654,
+        dutyAddr: '경상남도 진주시 진양호로 370 (신안동)',
     },
     {
         dutyName: '제일병원',
@@ -826,6 +944,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800003',
         lat: 35.1793997485,
         lon: 128.0899464997,
+        dutyAddr: '경상남도 진주시 진주대로 885 (강남동)',
     },
     {
         dutyName: '한성병원',
@@ -833,6 +952,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800062',
         lat: 35.5421522771,
         lon: 128.4934147264,
+        dutyAddr: '경상남도 창녕군 창녕읍 교리1길 2',
     },
     {
         dutyName: '경상남도마산의료원',
@@ -840,6 +960,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800025',
         lat: 35.19906819846745,
         lon: 128.56551976148475,
+        dutyAddr: '경상남도 창원시 마산합포구 3·15대로 231 (중앙동3가)',
     },
     {
         dutyName: '에스엠지연세병원',
@@ -847,6 +968,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800017',
         lat: 35.18635329986849,
         lon: 128.56163160027907,
+        dutyAddr: '경상남도 창원시 마산합포구 3·15대로 76 (월남동2가, 합포의료재단)',
     },
     {
         dutyName: '청아병원',
@@ -854,6 +976,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800009',
         lat: 35.24798366104159,
         lon: 128.50971731844322,
+        dutyAddr: '경상남도 창원시 마산회원구 내서읍 광려천서로 67 (청아병원)',
     },
     {
         dutyName: '성균관대학교삼성창원병원',
@@ -861,6 +984,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800020',
         lat: 35.242599227316994,
         lon: 128.592430520838,
+        dutyAddr: '경상남도 창원시 마산회원구 팔용로 158 (합성동, 삼성창원병원)',
     },
     {
         dutyName: '창원경상국립대학교병원',
@@ -868,6 +992,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2803505',
         lat: 35.19921298418469,
         lon: 128.7078072393552,
+        dutyAddr: '경상남도 창원시 성산구 삼정자로 11 (성주동, 창원경상대학교병원)',
     },
     {
         dutyName: '창원한마음병원',
@@ -875,6 +1000,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800007',
         lat: 35.2379796340839,
         lon: 128.699059273138,
+        dutyAddr: '경상남도 창원시 의창구 용동로57번길 8 (사림동)',
     },
     {
         dutyName: '창원파티마병원',
@@ -882,6 +1008,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800004',
         lat: 35.2372418321,
         lon: 128.6444852768,
+        dutyAddr: '경상남도 창원시 의창구 창이대로 45 (명서동)',
     },
     {
         dutyName: '연세에스병원',
@@ -889,6 +1016,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800021',
         lat: 35.1547321003,
         lon: 128.6983352518,
+        dutyAddr: '경상남도 창원시 진해구 해원로32번길 13 (이동)',
     },
     {
         dutyName: '새통영병원',
@@ -896,6 +1024,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800092',
         lat: 34.86535758722789,
         lon: 128.4206525557243,
+        dutyAddr: '경상남도 통영시 무전7길 192 (무전동)',
     },
     {
         dutyName: '함양성심병원',
@@ -903,6 +1032,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800080',
         lat: 35.52046827900683,
         lon: 127.72924773802185,
+        dutyAddr: '경상남도 함양군 함양읍 고운로 70',
     },
     {
         dutyName: '삼성합천병원',
@@ -910,6 +1040,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2800055',
         lat: 35.56635668398722,
         lon: 128.16327169035327,
+        dutyAddr: '경상남도 합천군 합천읍 대야로 876',
     },
     {
         dutyName: '경산중앙병원',
@@ -917,6 +1048,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700019',
         lat: 35.80882731345708,
         lon: 128.7401572913474,
+        dutyAddr: '경상북도 경산시 경안로 11 (백천동)',
     },
     {
         dutyName: '세명종합병원',
@@ -924,6 +1056,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700036',
         lat: 35.82621911080917,
         lon: 128.7374074375532,
+        dutyAddr: '경상북도 경산시 경안로 208 (중방동)',
     },
     {
         dutyName: '동국대학교의과대학경주병원',
@@ -931,6 +1064,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700003',
         lat: 35.85839884416154,
         lon: 129.19669937927446,
+        dutyAddr: '경상북도 경주시 동대로 87 (석장동)',
     },
     {
         dutyName: '고령영생병원',
@@ -938,6 +1072,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700070',
         lat: 35.72995531573922,
         lon: 128.27201138885076,
+        dutyAddr: '경상북도 고령군 대가야읍 중앙로 33 (영생병원)',
     },
     {
         dutyName: '순천향대학교구미병원',
@@ -945,6 +1080,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700013',
         lat: 36.10286857919866,
         lon: 128.38265476387454,
+        dutyAddr: '경상북도 구미시 1공단로 179 (공단동, (공단동))',
     },
     {
         dutyName: '구미차병원',
@@ -952,6 +1088,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700007',
         lat: 36.11452808183706,
         lon: 128.34054647885029,
+        dutyAddr: '경상북도 구미시 신시로10길 12 (형곡동)',
     },
     {
         dutyName: '구미강동병원',
@@ -959,6 +1096,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700015',
         lat: 36.096198858616575,
         lon: 128.42297791647263,
+        dutyAddr: '경상북도 구미시 인동20길 46 (진평동)',
     },
     {
         dutyName: '경상북도김천의료원',
@@ -966,6 +1104,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700018',
         lat: 36.12249076001089,
         lon: 128.12649330522635,
+        dutyAddr: '경상북도 김천시 모암길 24 (모암동)',
     },
     {
         dutyName: '김천제일병원',
@@ -973,6 +1112,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700012',
         lat: 36.135341995663524,
         lon: 128.11882383545816,
+        dutyAddr: '경상북도 김천시 신음1길 12 (신음동)',
     },
     {
         dutyName: '문경제일병원',
@@ -980,6 +1120,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700006',
         lat: 36.5848214366,
         lon: 128.189771534,
+        dutyAddr: '경상북도 문경시 당교3길 25 (모전동)',
     },
     {
         dutyName: '상주성모병원',
@@ -987,6 +1128,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700009',
         lat: 36.42029125774357,
         lon: 128.15973341130405,
+        dutyAddr: '경상북도 상주시 냉림서성길 7 (냉림동)',
     },
     {
         dutyName: '상주적십자병원',
@@ -994,6 +1136,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700011',
         lat: 36.414640776098004,
         lon: 128.15560122041242,
+        dutyAddr: '경상북도 상주시 상서문로 53 (남성동)',
     },
     {
         dutyName: '안동성소병원',
@@ -1001,6 +1144,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700004',
         lat: 36.56712693337398,
         lon: 128.72245351866204,
+        dutyAddr: '경상북도 안동시 서동문로 99 (금곡동)',
     },
     {
         dutyName: '안동병원',
@@ -1008,6 +1152,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700014',
         lat: 36.54691448006022,
         lon: 128.70097021920307,
+        dutyAddr: '경상북도 안동시 앙실로 11 (수상동)',
     },
     {
         dutyName: '경상북도안동의료원',
@@ -1015,6 +1160,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700001',
         lat: 36.56826733448251,
         lon: 128.73213342858523,
+        dutyAddr: '경상북도 안동시 태사2길 55 (북문동, 470)',
     },
     {
         dutyName: '영주기독병원',
@@ -1022,6 +1168,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700031',
         lat: 36.82516126894279,
         lon: 128.62114810991983,
+        dutyAddr: '경상북도 영주시 구성로 380 (영주동)',
     },
     {
         dutyName: '영주적십자병원',
@@ -1029,6 +1176,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2702752',
         lat: 36.8252579707,
         lon: 128.6040034927,
+        dutyAddr: '경상북도 영주시 대학로 327-0 (가흥동,영주적십자병원)',
     },
     {
         dutyName: '영남대학교영천병원',
@@ -1036,6 +1184,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700017',
         lat: 35.957320739100794,
         lon: 128.91305328332228,
+        dutyAddr: '경상북도 영천시 오수1길 10 (오수동)',
     },
     {
         dutyName: '예천권병원',
@@ -1043,6 +1192,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700023',
         lat: 36.65741644988633,
         lon: 128.45890491333589,
+        dutyAddr: '경상북도 예천군 예천읍 시장로 136',
     },
     {
         dutyName: '울릉군보건의료원',
@@ -1050,6 +1200,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2700553',
         lat: 37.485886024545444,
         lon: 130.89947707708177,
+        dutyAddr: '경상북도 울릉군 울릉읍 울릉순환로 396-18',
     },
     {
         dutyName: '울진군의료원',
@@ -1057,6 +1208,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700052',
         lat: 36.99264955966117,
         lon: 129.40949155236495,
+        dutyAddr: '경상북도 울진군 울진읍 현내항길 71',
     },
     {
         dutyName: '영남제일병원',
@@ -1064,6 +1216,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700063',
         lat: 36.38925516777733,
         lon: 128.43429486266444,
+        dutyAddr: '경상북도 의성군 안계면 용기4길 36',
     },
     {
         dutyName: '청도대남병원',
@@ -1071,6 +1224,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700038',
         lat: 35.64871261648798,
         lon: 128.73711323398672,
+        dutyAddr: '경상북도 청도군 화양읍 청화로 79-7',
     },
     {
         dutyName: '청송군보건의료원',
@@ -1078,6 +1232,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2700554',
         lat: 36.43104059070308,
         lon: 129.0526608512385,
+        dutyAddr: '경상북도 청송군 청송읍 의료원길 19',
     },
     {
         dutyName: '포항성모병원',
@@ -1085,6 +1240,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700016',
         lat: 36.01585627687779,
         lon: 129.33981334567275,
+        dutyAddr: '경상북도 포항시 남구 대잠동길 17 (대잠동)',
     },
     {
         dutyName: '포항세명기독병원',
@@ -1092,6 +1248,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700002',
         lat: 36.0181008246,
         lon: 129.3615706051,
+        dutyAddr: '경상북도 포항시 남구 포스코대로 351 (대도동)',
     },
     {
         dutyName: '에스포항병원',
@@ -1099,6 +1256,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700008',
         lat: 36.0348228983,
         lon: 129.3314002552,
+        dutyAddr: '경상북도 포항시 남구 희망대로 352 (이동, 에스포항병원)',
     },
     {
         dutyName: '좋은선린병원',
@@ -1106,6 +1264,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2702563',
         lat: 36.048089061494764,
         lon: 129.36704339734024,
+        dutyAddr: '경상북도 포항시 북구 대신로 43 (대신동)',
     },
     {
         dutyName: '경상북도포항의료원',
@@ -1113,6 +1272,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2700005',
         lat: 36.03462413480262,
         lon: 129.3549930430143,
+        dutyAddr: '경상북도 포항시 북구 용흥로 36 (용흥동, (용흥동))',
     },
     {
         dutyName: '신가병원',
@@ -1120,6 +1280,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500006',
         lat: 35.177619444444446,
         lon: 126.8298,
+        dutyAddr: '광주광역시 광산구 목련로 316 (신가동)',
     },
     {
         dutyName: '광주센트럴병원',
@@ -1127,6 +1288,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1502007',
         lat: 35.185893735732634,
         lon: 126.82909951503984,
+        dutyAddr: '광주광역시 광산구 수완로 6, A동1,3,5,6층/B동동 (신가동)',
     },
     {
         dutyName: 'KS병원',
@@ -1134,6 +1296,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500019',
         lat: 35.197963178976366,
         lon: 126.83322475289853,
+        dutyAddr: '광주광역시 광산구 왕버들로 220 (수완동)',
     },
     {
         dutyName: '하남성심병원',
@@ -1141,6 +1304,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500017',
         lat: 35.1664063968,
         lon: 126.800894228816,
+        dutyAddr: '광주광역시 광산구 용아로 259 하남성심병원 (산정동)',
     },
     {
         dutyName: '광주수완병원',
@@ -1148,6 +1312,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500018',
         lat: 35.19303617477934,
         lon: 126.82420927535313,
+        dutyAddr: '광주광역시 광산구 임방울대로 370 (수완동)',
     },
     {
         dutyName: '광주보훈병원',
@@ -1155,6 +1320,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500004',
         lat: 35.207797211036485,
         lon: 126.84947860623933,
+        dutyAddr: '광주광역시 광산구 첨단월봉로 99 (산월동)',
     },
     {
         dutyName: '첨단종합병원',
@@ -1162,6 +1328,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500011',
         lat: 35.22113373578457,
         lon: 126.84530205666944,
+        dutyAddr: '광주광역시 광산구 첨단중앙로170번길 59 (쌍암동)',
     },
     {
         dutyName: '동아병원',
@@ -1169,6 +1336,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500013',
         lat: 35.1347601218069,
         lon: 126.89990593135208,
+        dutyAddr: '광주광역시 남구 대남대로 238 (백운동)',
     },
     {
         dutyName: '광주씨티병원',
@@ -1176,6 +1344,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500009',
         lat: 35.11776253778263,
         lon: 126.8995475485602,
+        dutyAddr: '광주광역시 남구 서문대로654번길 5 (진월동)',
     },
     {
         dutyName: '광주기독병원',
@@ -1183,6 +1352,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500021',
         lat: 35.136682861070376,
         lon: 126.91198438867642,
+        dutyAddr: '광주광역시 남구 양림로 37 (양림동)',
     },
     {
         dutyName: '전남대학교병원',
@@ -1190,6 +1360,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500002',
         lat: 35.141852541291165,
         lon: 126.92158688926376,
+        dutyAddr: '광주광역시 동구 제봉로 42 (학동)',
     },
     {
         dutyName: '조선대학교병원',
@@ -1197,6 +1368,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500001',
         lat: 35.13854706991291,
         lon: 126.92683853357782,
+        dutyAddr: '광주광역시 동구 필문대로 365 (서석동)',
     },
     {
         dutyName: '광주병원',
@@ -1204,6 +1376,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500015',
         lat: 35.178949208210625,
         lon: 126.9281507303555,
+        dutyAddr: '광주광역시 북구 면앙로139번길 51 (두암동)',
     },
     {
         dutyName: '운암한국병원',
@@ -1211,6 +1384,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500010',
         lat: 35.18513334103592,
         lon: 126.86956982285518,
+        dutyAddr: '광주광역시 북구 북문대로 191 (운암동)',
     },
     {
         dutyName: '광주현대병원',
@@ -1218,6 +1392,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500003',
         lat: 35.18565646419727,
         lon: 126.89798149528589,
+        dutyAddr: '광주광역시 북구 설죽로 291 (용봉동)',
     },
     {
         dutyName: '광주일곡병원',
@@ -1225,6 +1400,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500005',
         lat: 35.20286119554041,
         lon: 126.89760857687219,
+        dutyAddr: '광주광역시 북구 양일로 309 (일곡동)',
     },
     {
         dutyName: '광주희망병원',
@@ -1232,6 +1408,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500007',
         lat: 35.21344678097714,
         lon: 126.87471568685204,
+        dutyAddr: '광주광역시 북구 하서로 429 (용두동)',
     },
     {
         dutyName: '서광병원',
@@ -1239,6 +1416,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500020',
         lat: 35.132568331498724,
         lon: 126.85552710578938,
+        dutyAddr: '광주광역시 서구 금화로59번길 6 (금호동)',
     },
     {
         dutyName: '상무병원',
@@ -1246,6 +1424,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500022',
         lat: 35.15242290709782,
         lon: 126.85391840686486,
+        dutyAddr: '광주광역시 서구 상무자유로 181-7 (치평동)',
     },
     {
         dutyName: '광주한국병원',
@@ -1253,6 +1432,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500016',
         lat: 35.15618108764772,
         lon: 126.86880878336211,
+        dutyAddr: '광주광역시 서구 월드컵4강로 223 (쌍촌동)',
     },
     {
         dutyName: '미래로21병원',
@@ -1260,6 +1440,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1500014',
         lat: 35.14102639112141,
         lon: 126.88528864095338,
+        dutyAddr: '광주광역시 서구 화운로 1 (화정동)',
     },
     {
         dutyName: '드림종합병원',
@@ -1267,6 +1448,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300034',
         lat: 35.8396345121582,
         lon: 128.5743546304414,
+        dutyAddr: '대구광역시 남구 대명로 153 (대명동)',
     },
     {
         dutyName: '대구가톨릭대학교병원',
@@ -1274,6 +1456,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300004',
         lat: 35.843065593522674,
         lon: 128.56742621424615,
+        dutyAddr: '대구광역시 남구 두류공원로17길 33 (대명동)',
     },
     {
         dutyName: '대구굿모닝병원',
@@ -1281,6 +1464,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300076',
         lat: 35.85296709243215,
         lon: 128.5740666762668,
+        dutyAddr: '대구광역시 남구 성당로 224 (대명동)',
     },
     {
         dutyName: '영남대학교병원',
@@ -1288,6 +1472,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300001',
         lat: 35.84750592025217,
         lon: 128.58513118547506,
+        dutyAddr: '대구광역시 남구 현충로 170 (대명동)',
     },
     {
         dutyName: '구병원',
@@ -1295,6 +1480,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300006',
         lat: 35.85082313699737,
         lon: 128.54148303217696,
+        dutyAddr: '대구광역시 달서구 감삼북길 141 (감삼동)',
     },
     {
         dutyName: '계명대학교동산병원',
@@ -1302,6 +1488,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300003',
         lat: 35.85388728949212,
         lon: 128.48012966656532,
+        dutyAddr: '대구광역시 달서구 달구벌대로 1035 (신당동)',
     },
     {
         dutyName: '더블유병원',
@@ -1309,6 +1496,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300110',
         lat: 35.85264247289801,
         lon: 128.54496871658273,
+        dutyAddr: '대구광역시 달서구 달구벌대로 1632, 1634(2~7층) 더블유병원 (감삼동)',
     },
     {
         dutyName: '한국보훈복지의료공단대구보훈병원',
@@ -1316,6 +1504,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300011',
         lat: 35.80313747018647,
         lon: 128.55164640976287,
+        dutyAddr: '대구광역시 달서구 월곡로 60 (도원동)',
     },
     {
         dutyName: '삼일병원',
@@ -1323,6 +1512,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300045',
         lat: 35.8327479530047,
         lon: 128.5538551132049,
+        dutyAddr: '대구광역시 달서구 월배로 436, 지하1,지상1~11층 (송현동)',
     },
     {
         dutyName: '나사렛종합병원',
@@ -1330,6 +1520,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300038',
         lat: 35.8147002604042,
         lon: 128.525094795643,
+        dutyAddr: '대구광역시 달서구 월배로 97, 나사렛병원 (진천동)',
     },
     {
         dutyName: '강남종합병원',
@@ -1337,6 +1528,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300018',
         lat: 35.88300855242191,
         lon: 128.66345602650745,
+        dutyAddr: '대구광역시 동구 동촌로 207, 강남병원 (방촌동)',
     },
     {
         dutyName: '대구파티마병원',
@@ -1344,6 +1536,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300009',
         lat: 35.88393360650045,
         lon: 128.62383509209542,
+        dutyAddr: '대구광역시 동구 아양로 99 (신암동)',
     },
     {
         dutyName: '칠곡가톨릭병원',
@@ -1351,6 +1544,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300005',
         lat: 35.934879518784534,
         lon: 128.54925198548904,
+        dutyAddr: '대구광역시 북구 칠곡중앙대로 440 (읍내동)',
     },
     {
         dutyName: '칠곡경북대학교병원',
@@ -1358,6 +1552,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300010',
         lat: 35.9560830613237,
         lon: 128.564408469835,
+        dutyAddr: '대구광역시 북구 호국로 807, 칠곡경북대학교병원(임상실습동 1~11층 포함) (학정동)',
     },
     {
         dutyName: '대구의료원',
@@ -1365,6 +1560,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300007',
         lat: 35.859623434747526,
         lon: 128.5405609266984,
+        dutyAddr: '대구광역시 서구 평리로 157 (중리동)',
     },
     {
         dutyName: '천주성삼병원',
@@ -1372,6 +1568,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300081',
         lat: 35.84022544517349,
         lon: 128.70573339664242,
+        dutyAddr: '대구광역시 수성구 달구벌대로 3190 (신매동, 천주성삼병원)',
     },
     {
         dutyName: '곽병원',
@@ -1379,6 +1576,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300008',
         lat: 35.870693147975665,
         lon: 128.58872807724623,
+        dutyAddr: '대구광역시 중구 국채보상로 531 (수동)',
     },
     {
         dutyName: '계명대학교대구동산병원',
@@ -1386,6 +1584,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1303386',
         lat: 35.869459650891685,
         lon: 128.5829311080459,
+        dutyAddr: '대구광역시 중구 달성로 56, 계명대학교대구동산병원 (동산동)',
     },
     {
         dutyName: '경북대학교병원',
@@ -1393,6 +1592,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1300002',
         lat: 35.866235497221616,
         lon: 128.60431466100363,
+        dutyAddr: '대구광역시 중구 동덕로 130 (삼덕동2가, 경북대학교병원)',
     },
     {
         dutyName: '대전보훈병원',
@@ -1400,6 +1600,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1600004',
         lat: 36.4469365928189,
         lon: 127.43940812262,
+        dutyAddr: '대전광역시 대덕구 대청로82번길 147 (신탄진동)',
     },
     {
         dutyName: '대전한국병원',
@@ -1407,6 +1608,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1600003',
         lat: 36.34831776122198,
         lon: 127.43575049626224,
+        dutyAddr: '대전광역시 동구 동서대로 1672 (성남동)',
     },
     {
         dutyName: '대청병원',
@@ -1414,6 +1616,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1602246',
         lat: 36.308286328996566,
         lon: 127.37055327992432,
+        dutyAddr: '대전광역시 서구 계백로 1322 (정림동, 대청병원)',
     },
     {
         dutyName: '건양대학교병원',
@@ -1421,6 +1624,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1600006',
         lat: 36.306711701457246,
         lon: 127.34263046359918,
+        dutyAddr: '대전광역시 서구 관저동로 158, 건양대학교병원 (관저동)',
     },
     {
         dutyName: '을지대학교병원',
@@ -1428,6 +1632,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1600002',
         lat: 36.355068712678154,
         lon: 127.38199955857135,
+        dutyAddr: '대전광역시 서구 둔산서로 95 (둔산동)',
     },
     {
         dutyName: '유성선병원',
@@ -1435,6 +1640,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1600007',
         lat: 36.37535496572087,
         lon: 127.32491359339663,
+        dutyAddr: '대전광역시 유성구 북유성대로 93 (지족동)',
     },
     {
         dutyName: '대전성모병원',
@@ -1442,6 +1648,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1600005',
         lat: 36.32302490017959,
         lon: 127.42027313317438,
+        dutyAddr: '대전광역시 중구 대흥로 64 (대흥동)',
     },
     {
         dutyName: '대전선병원',
@@ -1449,6 +1656,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1600008',
         lat: 36.3359621088938,
         lon: 127.41011056508802,
+        dutyAddr: '대전광역시 중구 목중로 29 (목동, 선병원)',
     },
     {
         dutyName: '충남대학교병원',
@@ -1456,6 +1664,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1600001',
         lat: 36.31696055071064,
         lon: 127.41546133417684,
+        dutyAddr: '대전광역시 중구 문화로 282 (대사동, 충남대학교병원)',
     },
     {
         dutyName: '기장병원',
@@ -1463,6 +1672,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200028',
         lat: 35.23602946449906,
         lon: 129.21649161387128,
+        dutyAddr: '부산광역시 기장군 기장읍 대청로72번길 6',
     },
     {
         dutyName: '동남권원자력의학원원자력병원',
@@ -1470,6 +1680,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200015',
         lat: 35.321418988977406,
         lon: 129.24364922146094,
+        dutyAddr: '부산광역시 기장군 장안읍 좌동길 40',
     },
     {
         dutyName: '부산성모병원',
@@ -1477,6 +1688,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200013',
         lat: 35.110457328247016,
         lon: 129.10919202844133,
+        dutyAddr: '부산광역시 남구 용호로232번길 25-14 (용호동)',
     },
     {
         dutyName: '좋은문화병원',
@@ -1484,6 +1696,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200026',
         lat: 35.1407239889452,
         lon: 129.05906375734872,
+        dutyAddr: '부산광역시 동구 범일로 119 (범일동)',
     },
     {
         dutyName: ' 봉생기념병원',
@@ -1491,6 +1704,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200017',
         lat: 35.13085783627095,
         lon: 129.0505708823645,
+        dutyAddr: '부산광역시 동구 중앙대로 401 &#40;좌천동, 봉생병원&#41;',
     },
     {
         dutyName: '동래봉생병원',
@@ -1498,6 +1712,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200011',
         lat: 35.19694647632553,
         lon: 129.0961666077834,
+        dutyAddr: '부산광역시 동래구 안연로109번길 27 (안락동)',
     },
     {
         dutyName: '대동병원',
@@ -1505,6 +1720,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200018',
         lat: 35.204273174435535,
         lon: 129.08021549527504,
+        dutyAddr: '부산광역시 동래구 충렬대로 187 (명륜동)',
     },
     {
         dutyName: ' 광혜병원',
@@ -1512,6 +1728,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200009',
         lat: 35.207033333333335,
         lon: 129.07113611111112,
+        dutyAddr: '부산광역시 동래구 충렬대로 96 (온천동, 광혜병원)',
     },
     {
         dutyName: ' 온종합병원',
@@ -1519,6 +1736,8 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200020',
         lat: 35.15787735996765,
         lon: 129.04998435792845,
+        dutyAddr:
+            '부산광역시 부산진구 가야대로 719, 767, 721, 본관 지하3~5층, 본관 6~11층 전부, 본관 12층 일부, 본관 13~14층 전부, (당감동)',
     },
     {
         dutyName: '인제대학교부산백병원',
@@ -1526,6 +1745,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200001',
         lat: 35.146454469689104,
         lon: 129.02057150748323,
+        dutyAddr: '부산광역시 부산진구 복지로 75, 진사로83번길 81, 1층(일부), 3층 (개금동)',
     },
     {
         dutyName: '동의병원',
@@ -1533,6 +1753,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200019',
         lat: 35.169922174960384,
         lon: 129.0767443760438,
+        dutyAddr: '부산광역시 부산진구 양정로 62, 지상2ㆍ3ㆍ10층 각 일부/ 지하1ㆍ지상1ㆍ지상4~지상8층 전층 (양정동)',
     },
     {
         dutyName: '춘해병원',
@@ -1540,6 +1761,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200025',
         lat: 35.147036979509224,
         lon: 129.05854773411613,
+        dutyAddr: '부산광역시 부산진구 중앙대로 605, 지상1층~지상9층 (범천동)',
     },
     {
         dutyName: '구포성심병원',
@@ -1547,6 +1769,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200045',
         lat: 35.20971002878793,
         lon: 129.0047510374652,
+        dutyAddr: '부산광역시 북구 낙동대로 1786 (구포동)',
     },
     {
         dutyName: ' 부민병원',
@@ -1554,6 +1777,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200006',
         lat: 35.211914318056756,
         lon: 129.01121232860874,
+        dutyAddr: '부산광역시 북구 만덕대로 59 (덕천동)',
     },
     {
         dutyName: '좋은삼선병원',
@@ -1561,6 +1785,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200005',
         lat: 35.1505677387241,
         lon: 129.0081978825217,
+        dutyAddr: '부산광역시 사상구 가야대로 326, 좋은삼선병원 (주례동)',
     },
     {
         dutyName: '한국보훈복지의료공단 부산보훈병원',
@@ -1568,6 +1793,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200016',
         lat: 35.15333436517864,
         lon: 129.00656514354415,
+        dutyAddr: '부산광역시 사상구 백양대로 420 (주례동)',
     },
     {
         dutyName: '고신대학교복음병원',
@@ -1575,6 +1801,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200004',
         lat: 35.08029169184386,
         lon: 129.01572016067405,
+        dutyAddr: '부산광역시 서구 감천로 262 (암남동)',
     },
     {
         dutyName: '부산대학교병원',
@@ -1582,6 +1809,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200002',
         lat: 35.10105418267188,
         lon: 129.01922207984205,
+        dutyAddr: '부산광역시 서구 구덕로 179 (아미동1가)',
     },
     {
         dutyName: '동아대학교병원',
@@ -1589,6 +1817,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200003',
         lat: 35.12000583968841,
         lon: 129.01760368790895,
+        dutyAddr: '부산광역시 서구 대신공원로 26 (동대신동3가)',
     },
     {
         dutyName: '삼육부산병원',
@@ -1596,6 +1825,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200021',
         lat: 35.11177720675051,
         lon: 129.01074979097717,
+        dutyAddr: '부산광역시 서구 대티로 170 (서대신동2가)',
     },
     {
         dutyName: ' 좋은강안병원',
@@ -1603,6 +1833,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200008',
         lat: 35.15015905669445,
         lon: 129.11072434834875,
+        dutyAddr: '부산광역시 수영구 수영로 493 (남천동)',
     },
     {
         dutyName: '비에이치에스한서병원',
@@ -1610,6 +1841,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200007',
         lat: 35.1610460623,
         lon: 129.1128811328,
+        dutyAddr: '부산광역시 수영구 수영로 615 (광안동)',
     },
     {
         dutyName: ' 센텀종합병원',
@@ -1617,6 +1849,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200098',
         lat: 35.16637129021226,
         lon: 129.11466833709284,
+        dutyAddr: '부산광역시 수영구 수영로679번길 8 (광안동)',
     },
     {
         dutyName: '부산광역시의료원',
@@ -1624,6 +1857,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200024',
         lat: 35.187312651309654,
         lon: 129.05917919433944,
+        dutyAddr: '부산광역시 연제구 월드컵대로 359 (거제동, 1동, 5동일부)',
     },
     {
         dutyName: ' 해동병원',
@@ -1631,6 +1865,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200012',
         lat: 35.09194298219175,
         lon: 129.04386428258525,
+        dutyAddr: '부산광역시 영도구 태종로 133 (봉래동3가)',
     },
     {
         dutyName: '영도병원',
@@ -1638,6 +1873,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200014',
         lat: 35.09227119620571,
         lon: 129.04053714557975,
+        dutyAddr: '부산광역시 영도구 태종로 85 (대교동2가)',
     },
     {
         dutyName: '메리놀병원',
@@ -1645,6 +1881,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200023',
         lat: 35.107580971280804,
         lon: 129.03246380102908,
+        dutyAddr: '부산광역시 중구 중구로 121 (대청동4가)',
     },
     {
         dutyName: ' 해운대부민병원',
@@ -1652,6 +1889,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1205143',
         lat: 35.16142040775608,
         lon: 129.1556561002225,
+        dutyAddr: '부산광역시 해운대구 해운대로 584 (우동)',
     },
     {
         dutyName: '인제대학교 해운대백병원',
@@ -1659,6 +1897,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1200022',
         lat: 35.17334313589264,
         lon: 129.182181239924,
+        dutyAddr: '부산광역시 해운대구 해운대로 875 (좌동)',
     },
     {
         dutyName: '연세대학교의과대학 강남세브란스병원',
@@ -1666,6 +1905,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100015',
         lat: 37.492806984645476,
         lon: 127.04631254186798,
+        dutyAddr: '서울특별시 강남구 언주로 211, 강남세브란스병원 (도곡동)',
     },
     {
         dutyName: '삼성서울병원',
@@ -1673,6 +1913,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100010',
         lat: 37.48851613490445,
         lon: 127.08668245340024,
+        dutyAddr: '서울특별시 강남구 일원로 81 (일원동, 삼성의료원)',
     },
     {
         dutyName: '강동경희대학교의대병원',
@@ -1680,6 +1921,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100043',
         lat: 37.5520459324005,
         lon: 127.157084787845,
+        dutyAddr: '서울특별시 강동구 동남로 892 (상일동)',
     },
     {
         dutyName: '강동성심병원',
@@ -1687,6 +1929,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100028',
         lat: 37.53598408220376,
         lon: 127.13526354631517,
+        dutyAddr: '서울특별시 강동구 성안로 150 (길동)',
     },
     {
         dutyName: '한국보훈복지의료공단 중앙보훈병원',
@@ -1694,6 +1937,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100053',
         lat: 37.528220900896635,
         lon: 127.14671886173552,
+        dutyAddr: '서울특별시 강동구 진황도로61길 53 (둔촌동)',
     },
     {
         dutyName: '이대서울병원',
@@ -1701,6 +1945,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1120796',
         lat: 37.557261149,
         lon: 126.8362659275,
+        dutyAddr: '서울특별시 강서구 공항대로 260, 이화의대부속서울병원 (마곡동)',
     },
     {
         dutyName: '부민병원',
@@ -1708,6 +1953,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100036',
         lat: 37.556940892893586,
         lon: 126.85094950539181,
+        dutyAddr: '서울특별시 강서구 공항대로 389, 부민병원 (등촌동)',
     },
     {
         dutyName: '에이치플러스양지병원',
@@ -1715,6 +1961,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100041',
         lat: 37.48427507045319,
         lon: 126.93253922577287,
+        dutyAddr: '서울특별시 관악구 남부순환로 1636, 양지병원 (신림동)',
     },
     {
         dutyName: '건국대학교병원',
@@ -1722,6 +1969,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100002',
         lat: 37.54084479467721,
         lon: 127.0721229093036,
+        dutyAddr: '서울특별시 광진구 능동로 120-1 (화양동)',
     },
     {
         dutyName: '혜민병원',
@@ -1729,6 +1977,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100051',
         lat: 37.535315660180416,
         lon: 127.08360130258502,
+        dutyAddr: '서울특별시 광진구 자양로 85 (자양동)',
     },
     {
         dutyName: '구로성심병원',
@@ -1736,6 +1985,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100026',
         lat: 37.49964578669388,
         lon: 126.86636039556485,
+        dutyAddr: '서울특별시 구로구 경인로 427, 구로성심병원 &#40;고척동&#41;',
     },
     {
         dutyName: '고려대학교구로병원',
@@ -1743,6 +1993,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100014',
         lat: 37.49211114525054,
         lon: 126.8847449363546,
+        dutyAddr: '서울특별시 구로구 구로동로 148, 고려대부속구로병원 &#40;구로동&#41;',
     },
     {
         dutyName: '희명병원',
@@ -1750,6 +2001,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100049',
         lat: 37.45567063464179,
         lon: 126.90056251863875,
+        dutyAddr: '서울특별시 금천구 시흥대로 244 (시흥동)',
     },
     {
         dutyName: '한국원자력의학원원자력병원',
@@ -1757,6 +2009,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100027',
         lat: 37.628815981330355,
         lon: 127.08269315796588,
+        dutyAddr: '서울특별시 노원구 노원로 75, 한국원자력의학원 (공릉동)',
     },
     {
         dutyName: '인제대학교상계백병원',
@@ -1764,6 +2017,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100016',
         lat: 37.6485812672986,
         lon: 127.06311619032103,
+        dutyAddr: '서울특별시 노원구 동일로 1342, 상계백병원 (상계동)',
     },
     {
         dutyName: '노원을지대학교병원',
@@ -1771,6 +2025,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100048',
         lat: 37.636442927386746,
         lon: 127.07000281991385,
+        dutyAddr: '서울특별시 노원구 한글비석로 68, 을지병원 (하계동)',
     },
     {
         dutyName: ' 한일병원',
@@ -1778,6 +2033,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100020',
         lat: 37.64611570419094,
         lon: 127.02902417950423,
+        dutyAddr: '서울특별시 도봉구 우이천로 308, 한일병원 &#40;쌍문동&#41;',
     },
     {
         dutyName: '경희대학교병원',
@@ -1785,6 +2041,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100001',
         lat: 37.5938765502235,
         lon: 127.05183223390303,
+        dutyAddr: '서울특별시 동대문구 경희대로 23 (회기동)',
     },
     {
         dutyName: '삼육서울병원',
@@ -1792,6 +2049,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100021',
         lat: 37.587992001305395,
         lon: 127.0653288266823,
+        dutyAddr: '서울특별시 동대문구 망우로 82 (휘경동)',
     },
     {
         dutyName: '서울특별시 동부병원',
@@ -1799,6 +2057,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100022',
         lat: 37.57539886464885,
         lon: 127.03140257525507,
+        dutyAddr: '서울특별시 동대문구 무학로 124 (용두동)',
     },
     {
         dutyName: '서울성심병원',
@@ -1806,6 +2065,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100050',
         lat: 37.58419129209865,
         lon: 127.04983805981972,
+        dutyAddr: '서울특별시 동대문구 왕산로 259, 서울성심병원 (청량리동)',
     },
     {
         dutyName: '서울특별시보라매병원',
@@ -1813,6 +2073,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100040',
         lat: 37.4937184009319,
         lon: 126.92404876254014,
+        dutyAddr: '서울특별시 동작구 보라매로5길 20 (신대방동)',
     },
     {
         dutyName: '중앙대학교병원',
@@ -1820,6 +2081,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100003',
         lat: 37.50707428493414,
         lon: 126.96079378447554,
+        dutyAddr: '서울특별시 동작구 흑석로 102 (흑석동)',
     },
     {
         dutyName: '연세대학교의과대학세브란스병원',
@@ -1827,6 +2089,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100007',
         lat: 37.56211711412639,
         lon: 126.94082769649863,
+        dutyAddr: '서울특별시 서대문구 연세로 50-1 (신촌동)',
     },
     {
         dutyName: '동신병원',
@@ -1834,6 +2097,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100025',
         lat: 37.58110428173239,
         lon: 126.93658306608872,
+        dutyAddr: '서울특별시 서대문구 연희로 272, 동신병원 본관동 (홍은동)',
     },
     {
         dutyName: '서울성모병원',
@@ -1841,6 +2105,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100012',
         lat: 37.501800804785276,
         lon: 127.00472725970137,
+        dutyAddr: '서울특별시 서초구 반포대로 222 (반포동)',
     },
     {
         dutyName: '한양대학교병원',
@@ -1848,6 +2113,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100013',
         lat: 37.559944533564746,
         lon: 127.04488284061982,
+        dutyAddr: '서울특별시 성동구 왕십리로 222-1 (사근동)',
     },
     {
         dutyName: '고려대학교안암병원',
@@ -1855,6 +2121,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100008',
         lat: 37.58715608002366,
         lon: 127.02647086385966,
+        dutyAddr: '서울특별시 성북구 고려대로 73, 고려대병원 (안암동5가)',
     },
     {
         dutyName: '경찰병원',
@@ -1862,6 +2129,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100039',
         lat: 37.496413213560785,
         lon: 127.12348793503202,
+        dutyAddr: '서울특별시 송파구 송이로 123, 국립경찰병원 (가락동)',
     },
     {
         dutyName: '서울아산병원',
@@ -1869,6 +2137,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100009',
         lat: 37.526563966361216,
         lon: 127.10823825113607,
+        dutyAddr: '서울특별시 송파구 올림픽로43길 88, 서울아산병원 (풍납동)',
     },
     {
         dutyName: '홍익병원',
@@ -1876,6 +2145,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100019',
         lat: 37.52844147447355,
         lon: 126.8636640030062,
+        dutyAddr: '서울특별시 양천구 목동로 225, 홍익병원본관 (신정동)',
     },
     {
         dutyName: '서울특별시서남병원',
@@ -1883,6 +2153,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100223',
         lat: 37.51201935883779,
         lon: 126.8331299304024,
+        dutyAddr: '서울특별시 양천구 신정이펜1로 20 (신정동)',
     },
     {
         dutyName: '이대목동병원',
@@ -1890,6 +2161,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100005',
         lat: 37.53654282637804,
         lon: 126.8862159683056,
+        dutyAddr: '서울특별시 양천구 안양천로 1071 (목동)',
     },
     {
         dutyName: '여의도성모병원',
@@ -1897,6 +2169,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100011',
         lat: 37.51827233800711,
         lon: 126.93673129599131,
+        dutyAddr: '서울특별시 영등포구 63로 10, 여의도성모병원 (여의도동)',
     },
     {
         dutyName: '명지성모병원',
@@ -1904,6 +2177,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100024',
         lat: 37.4938507104387,
         lon: 126.89925446922592,
+        dutyAddr: '서울특별시 영등포구 도림로 156, 명지성모병원 (대림동)',
     },
     {
         dutyName: '대림성모병원',
@@ -1911,6 +2185,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100037',
         lat: 37.49068925436284,
         lon: 126.90716948025135,
+        dutyAddr: '서울특별시 영등포구 시흥대로 657 (대림동, 대림성모병원)',
     },
     {
         dutyName: '한림대학교강남성심병원',
@@ -1918,6 +2193,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100055',
         lat: 37.4932492859,
         lon: 126.9086725295,
+        dutyAddr: '서울특별시 영등포구 신길로 1 (대림동, 강남성심병원)',
     },
     {
         dutyName: '성애병원',
@@ -1925,6 +2201,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100054',
         lat: 37.51205044957338,
         lon: 126.92236733617031,
+        dutyAddr: '서울특별시 영등포구 여의대방로53길 22 (신길동, 성애병원)',
     },
     {
         dutyName: '순천향대학교 서울병원',
@@ -1932,6 +2209,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100004',
         lat: 37.53384172231443,
         lon: 127.00441798640304,
+        dutyAddr: '서울특별시 용산구 대사관로 59 (한남동)',
     },
     {
         dutyName: '은평성모병원',
@@ -1939,6 +2217,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1121013',
         lat: 37.633608409726854,
         lon: 126.91615048739686,
+        dutyAddr: '서울특별시 은평구 통일로 1021 (진관동)',
     },
     {
         dutyName: '청구성심병원',
@@ -1946,6 +2225,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100023',
         lat: 37.62079154435882,
         lon: 126.91955399169245,
+        dutyAddr: '서울특별시 은평구 통일로 873 (갈현동)',
     },
     {
         dutyName: '서울대학교병원',
@@ -1953,6 +2233,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100017',
         lat: 37.57966608924356,
         lon: 126.99896308412191,
+        dutyAddr: '서울특별시 종로구 대학로 101 (연건동)',
     },
     {
         dutyName: '강북삼성병원',
@@ -1960,6 +2241,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100006',
         lat: 37.568497631233825,
         lon: 126.96793805451702,
+        dutyAddr: '서울특별시 종로구 새문안로 29 (평동)',
     },
     {
         dutyName: '서울적십자병원',
@@ -1967,6 +2249,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100029',
         lat: 37.56715536263689,
         lon: 126.96699861289684,
+        dutyAddr: '서울특별시 종로구 새문안로 9, 적십자병원 (평동)',
     },
     {
         dutyName: '세란병원',
@@ -1974,6 +2257,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100032',
         lat: 37.57534016994642,
         lon: 126.9577071892358,
+        dutyAddr: '서울특별시 종로구 통일로 256 (무악동)',
     },
     {
         dutyName: '국립중앙의료원',
@@ -1981,6 +2265,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100052',
         lat: 37.56733955813183,
         lon: 127.00579539705473,
+        dutyAddr: '서울특별시 중구 을지로 245, 국립중앙의료원 (을지로6가)',
     },
     {
         dutyName: '동부제일병원',
@@ -1988,6 +2273,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100075',
         lat: 37.60067564592665,
         lon: 127.1090292210168,
+        dutyAddr: '서울특별시 중랑구 망우로 511, 동부제일병원 지하1~6층 (망우동)',
     },
     {
         dutyName: '녹색병원',
@@ -1995,6 +2281,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100044',
         lat: 37.58362083896108,
         lon: 127.08605546969358,
+        dutyAddr: '서울특별시 중랑구 사가정로49길 53 (면목동)',
     },
     {
         dutyName: '서울특별시서울의료원',
@@ -2002,6 +2289,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1100035',
         lat: 37.61286931510163,
         lon: 127.0980910949257,
+        dutyAddr: '서울특별시 중랑구 신내로 156 (신내동)',
     },
     {
         dutyName: '세종충남대학교병원',
@@ -2009,6 +2297,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1800441',
         lat: 36.5195133641377,
         lon: 127.257942661368,
+        dutyAddr: '세종특별자치시 보듬7로 20, 세종충남대학교병원 (도담동)',
     },
     {
         dutyName: ' 엔케이세종병원',
@@ -2016,6 +2305,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1800417',
         lat: 36.47962250753158,
         lon: 127.26225618927695,
+        dutyAddr: '세종특별자치시 한누리대로 161, 세종시 NK리움힐 상가 1~8층 (나성동)',
     },
     {
         dutyName: '중앙병원',
@@ -2023,6 +2313,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1700028',
         lat: 35.53208761614168,
         lon: 129.3048401436768,
+        dutyAddr: '울산광역시 남구 문수로 472, 중앙병원 (신정동)',
     },
     {
         dutyName: '좋은삼정병원',
@@ -2030,6 +2321,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1700011',
         lat: 35.55282641650826,
         lon: 129.26899792409964,
+        dutyAddr: '울산광역시 남구 북부순환도로 51 (무거동)',
     },
     {
         dutyName: '울산병원',
@@ -2037,6 +2329,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1700003',
         lat: 35.54621707569275,
         lon: 129.32309962689618,
+        dutyAddr: '울산광역시 남구 월평로171번길 13 (신정동)',
     },
     {
         dutyName: '울산대학교병원',
@@ -2044,6 +2337,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1700004',
         lat: 35.5200593154,
         lon: 129.4288047478,
+        dutyAddr: '울산광역시 동구 대학병원로 25, 울산대학교병원 (전하동)',
     },
     {
         dutyName: '울산시티병원',
@@ -2051,6 +2345,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1700025',
         lat: 35.58285370330335,
         lon: 129.35905740278506,
+        dutyAddr: '울산광역시 북구 산업로 1007 (연암동)',
     },
     {
         dutyName: '서울산보람병원',
@@ -2058,6 +2353,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1700001',
         lat: 35.55991148325753,
         lon: 129.12071299840133,
+        dutyAddr: '울산광역시 울주군 삼남읍 중평로 53, 서울산보람병원',
     },
     {
         dutyName: '동강병원',
@@ -2065,6 +2361,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1700002',
         lat: 35.55340950863559,
         lon: 129.30194290200077,
+        dutyAddr: '울산광역시 중구 태화로 239 (태화동)',
     },
     {
         dutyName: '비에스종합병원',
@@ -2072,6 +2369,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1403617',
         lat: 37.7360530472,
         lon: 126.4857069547,
+        dutyAddr: '인천광역시 강화군 강화읍 충렬사로 31',
     },
     {
         dutyName: '인천세종병원',
@@ -2079,6 +2377,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1403372',
         lat: 37.5325382832,
         lon: 126.7368531237,
+        dutyAddr: '인천광역시 계양구 계양문화로 20-  (작전동, (작전동))',
     },
     {
         dutyName: '한림병원',
@@ -2086,6 +2385,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400014',
         lat: 37.53218449100167,
         lon: 126.73435495537973,
+        dutyAddr: '인천광역시 계양구 장제로 722 (작전동)',
     },
     {
         dutyName: ' 길병원',
@@ -2093,6 +2393,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400001',
         lat: 37.45208024654252,
         lon: 126.70916173607195,
+        dutyAddr: '인천광역시 남동구 남동대로774번길 21 (구월동, 가천대학교길병원)',
     },
     {
         dutyName: '인천힘찬종합병원',
@@ -2100,6 +2401,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1403871',
         lat: 37.4010623210136,
         lon: 126.714686842521,
+        dutyAddr: '인천광역시 남동구 논현로 72, 인천힘찬종합병원 (논현동)',
     },
     {
         dutyName: '인천광역시의료원',
@@ -2107,6 +2409,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400017',
         lat: 37.47884441174466,
         lon: 126.66861045817642,
+        dutyAddr: '인천광역시 동구 방축로 217 (송림동, 인천광역시 의료원)',
     },
     {
         dutyName: ' 인천백병원',
@@ -2114,6 +2417,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400007',
         lat: 37.4772581429266,
         lon: 126.648504056866,
+        dutyAddr: '인천광역시 동구 샛골로 214 (송림동)',
     },
     {
         dutyName: '현대유비스병원',
@@ -2121,6 +2425,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400004',
         lat: 37.461743833494644,
         lon: 126.64314168953122,
+        dutyAddr: '인천광역시 미추홀구 독배로 503 (숭의동)',
     },
     {
         dutyName: '인천사랑병원',
@@ -2128,6 +2433,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400016',
         lat: 37.4620681991805,
         lon: 126.680345104401,
+        dutyAddr: '인천광역시 미추홀구 미추홀대로 726 (주안동)',
     },
     {
         dutyName: '인천성모병원',
@@ -2135,6 +2441,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400012',
         lat: 37.4845586499062,
         lon: 126.724708130675,
+        dutyAddr: '인천광역시 부평구 동수로 56 (부평동)',
     },
     {
         dutyName: ' 부평세림병원',
@@ -2142,6 +2449,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400013',
         lat: 37.50684250997099,
         lon: 126.71994675790395,
+        dutyAddr: '인천광역시 부평구 부평대로 175 (청천동, 세림병원)',
     },
     {
         dutyName: '국제성모병원',
@@ -2149,6 +2457,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400015',
         lat: 37.542372653918065,
         lon: 126.68360486878781,
+        dutyAddr: '인천광역시 서구 심곡로100번길 25 (심곡동, 인천국제성모병원)',
     },
     {
         dutyName: '온누리병원',
@@ -2156,6 +2465,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400005',
         lat: 37.60280557009656,
         lon: 126.65430866269227,
+        dutyAddr: '인천광역시 서구 완정로 199 (왕길동)',
     },
     {
         dutyName: ' 나은병원',
@@ -2163,6 +2473,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400003',
         lat: 37.4890534064866,
         lon: 126.679450677348,
+        dutyAddr: '인천광역시 서구 원적로 23 (가좌동, 원적로 27번길 11(가좌동))',
     },
     {
         dutyName: '검단탑병원',
@@ -2170,6 +2481,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400010',
         lat: 37.59241914491385,
         lon: 126.6710400927469,
+        dutyAddr: '인천광역시 서구 청마로19번길 5 (당하동)',
     },
     {
         dutyName: ' 뉴성민병원',
@@ -2177,6 +2489,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400008',
         lat: 37.5089936801167,
         lon: 126.669478649026,
+        dutyAddr: '인천광역시 서구 칠천왕로33번길 17 (석남동, 신석로 70(석남1동, 성민병원))',
     },
     {
         dutyName: '나사렛국제병원',
@@ -2184,6 +2497,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400011',
         lat: 37.4079911136402,
         lon: 126.67046935782248,
+        dutyAddr: '인천광역시 연수구 먼우금로 98 (동춘동, 나사렛국제병원)',
     },
     {
         dutyName: '인천적십자병원',
@@ -2191,6 +2505,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400018',
         lat: 37.4185669257,
         lon: 126.6875335314,
+        dutyAddr: '인천광역시 연수구 원인재로 263 (연수동, 인천적십자병원)',
     },
     {
         dutyName: '인천광역시의료원백령병원',
@@ -2198,6 +2513,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400037',
         lat: 37.96801574541532,
         lon: 124.72111307252132,
+        dutyAddr: '인천광역시 옹진군 백령면 백령로 233, 인천광역시의료원 백령병원',
     },
     {
         dutyName: '인천기독병원',
@@ -2205,6 +2521,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400009',
         lat: 37.47122873588076,
         lon: 126.63208102847187,
+        dutyAddr: '인천광역시 중구 답동로30번길 10 (율목동)',
     },
     {
         dutyName: '인하대학교병원',
@@ -2212,6 +2529,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A1400002',
         lat: 37.4584235016321,
         lon: 126.631868269228,
+        dutyAddr: '인천광역시 중구 인항로 27 (신흥동3가)',
     },
     {
         dutyName: '전라남도강진의료원',
@@ -2219,6 +2537,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600050',
         lat: 34.63681860822126,
         lon: 126.75789950922355,
+        dutyAddr: '전라남도 강진군 강진읍 탐진로 5',
     },
     {
         dutyName: '고흥종합병원',
@@ -2226,6 +2545,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600018',
         lat: 34.620393082853,
         lon: 127.293713733344,
+        dutyAddr: '전라남도 고흥군 고흥읍 고흥로 1935',
     },
     {
         dutyName: '녹동현대병원',
@@ -2233,6 +2553,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600068',
         lat: 34.5461939078177,
         lon: 127.14569777683869,
+        dutyAddr: '전라남도 고흥군 도양읍 차경구렁목길 215',
     },
     {
         dutyName: '곡성사랑병원',
@@ -2240,6 +2561,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600029',
         lat: 35.27628370526432,
         lon: 127.2879760334259,
+        dutyAddr: '전라남도 곡성군 곡성읍 곡성로 761',
     },
     {
         dutyName: '광양사랑병원',
@@ -2247,6 +2569,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600006',
         lat: 34.93614549410383,
         lon: 127.6969510970332,
+        dutyAddr: '전라남도 광양시 공영로 71 (중동)',
     },
     {
         dutyName: ' 광양서울병원',
@@ -2254,6 +2577,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600024',
         lat: 34.957912006875524,
         lon: 127.69055714590516,
+        dutyAddr: '전라남도 광양시 진등길 93 (마동)',
     },
     {
         dutyName: '구례병원',
@@ -2261,6 +2585,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600061',
         lat: 35.215900947788214,
         lon: 127.46406009751603,
+        dutyAddr: '전라남도 구례군 구례읍 동편제길 4',
     },
     {
         dutyName: '나주종합병원',
@@ -2268,6 +2593,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600016',
         lat: 35.03640277777778,
         lon: 126.72143611111112,
+        dutyAddr: '전라남도 나주시 영산로 5419 (성북동)',
     },
     {
         dutyName: '빛가람종합병원',
@@ -2275,6 +2601,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2602211',
         lat: 35.024204844204,
         lon: 126.798747430459,
+        dutyAddr: '전라남도 나주시 정보화길 49-0 (빛가람동)',
     },
     {
         dutyName: '담양사랑병원',
@@ -2282,6 +2609,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600054',
         lat: 35.31524596036869,
         lon: 126.98263077003998,
+        dutyAddr: '전라남도 담양군 담양읍 천변7길 19',
     },
     {
         dutyName: ' 세안종합병원',
@@ -2289,6 +2617,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600007',
         lat: 34.817030098221025,
         lon: 126.38033941552499,
+        dutyAddr: '전라남도 목포시 고하대로 795-2 (연산동)',
     },
     {
         dutyName: '목포기독병원',
@@ -2296,6 +2625,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600020',
         lat: 34.80450726279005,
         lon: 126.4204245807054,
+        dutyAddr: '전라남도 목포시 백년대로 303 (상동)',
     },
     {
         dutyName: '목포한국병원',
@@ -2303,6 +2633,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600011',
         lat: 34.8092145829474,
         lon: 126.4163391650001,
+        dutyAddr: '전라남도 목포시 영산로 483 (상동)',
     },
     {
         dutyName: '목포중앙병원',
@@ -2310,6 +2641,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600017',
         lat: 34.8208073192579,
         lon: 126.421380872161,
+        dutyAddr: '전라남도 목포시 영산로 627 (석현동)',
     },
     {
         dutyName: '목포시의료원',
@@ -2317,6 +2649,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600022',
         lat: 34.80395500792446,
         lon: 126.40538707879497,
+        dutyAddr: '전라남도 목포시 이로로 18 (용해동, (용해동))',
     },
     {
         dutyName: '무안병원',
@@ -2324,6 +2657,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600003',
         lat: 34.99175918279295,
         lon: 126.48926066040337,
+        dutyAddr: '전라남도 무안군 무안읍 몽탄로 65',
     },
     {
         dutyName: '보성아산병원',
@@ -2331,6 +2665,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600052',
         lat: 34.775470518786,
         lon: 127.104284083365,
+        dutyAddr: '전라남도 보성군 미력면 가평길 36-17',
     },
     {
         dutyName: '벌교삼호병원',
@@ -2338,6 +2673,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600066',
         lat: 34.833846754024535,
         lon: 127.34573228719377,
+        dutyAddr: '전라남도 보성군 벌교읍 남하로 12',
     },
     {
         dutyName: '순천제일병원',
@@ -2345,6 +2681,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600008',
         lat: 34.95422459893048,
         lon: 127.52385648056844,
+        dutyAddr: '전라남도 순천시 기적의도서관1길 3 (조례동)',
     },
     {
         dutyName: '전라남도순천의료원',
@@ -2352,6 +2689,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600056',
         lat: 34.95798908690572,
         lon: 127.48303613267494,
+        dutyAddr: '전라남도 순천시 서문성터길 2 (매곡동)',
     },
     {
         dutyName: '성가롤로병원',
@@ -2359,6 +2697,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600019',
         lat: 34.9634252378637,
         lon: 127.542308899549,
+        dutyAddr: '전라남도 순천시 순광로 221 (조례동)',
     },
     {
         dutyName: '한국병원',
@@ -2366,6 +2705,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600005',
         lat: 34.947741459842966,
         lon: 127.51235838977138,
+        dutyAddr: '전라남도 순천시 우명길 42 (연향동)',
     },
     {
         dutyName: '순천중앙병원',
@@ -2373,6 +2713,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600004',
         lat: 34.95165645129011,
         lon: 127.4844113418781,
+        dutyAddr: '전라남도 순천시 장명로 5 (장천동)',
     },
     {
         dutyName: '신안대우병원',
@@ -2380,6 +2721,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600051',
         lat: 34.722263099542104,
         lon: 125.93256566497465,
+        dutyAddr: '전라남도 신안군 비금면 송치길 155-11',
     },
     {
         dutyName: '여천전남병원',
@@ -2387,6 +2729,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600014',
         lat: 34.76918041182927,
         lon: 127.65404273510529,
+        dutyAddr: '전라남도 여수시 무선로 95 (선원동)',
     },
     {
         dutyName: ' 여수제일병원',
@@ -2394,6 +2737,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600027',
         lat: 34.766166666666656,
         lon: 127.66355833333331,
+        dutyAddr: '전라남도 여수시 쌍봉로 70 (학동, (학동))',
     },
     {
         dutyName: '여수전남병원',
@@ -2401,6 +2745,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600010',
         lat: 34.74501919502327,
         lon: 127.72808408876027,
+        dutyAddr: '전라남도 여수시 좌수영로 49 (광무동, 전남병원)',
     },
     {
         dutyName: ' 영광기독병원',
@@ -2408,6 +2753,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600034',
         lat: 35.274959355007304,
         lon: 126.5108758767997,
+        dutyAddr: '전라남도 영광군 영광읍 신남로 265',
     },
     {
         dutyName: '영광종합병원',
@@ -2415,6 +2761,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600015',
         lat: 35.2841836238628,
         lon: 126.498940298383,
+        dutyAddr: '전라남도 영광군 영광읍 와룡로 3,',
     },
     {
         dutyName: '영암한국병원',
@@ -2422,6 +2769,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600070',
         lat: 34.794341315816496,
         lon: 126.70116990992958,
+        dutyAddr: '전라남도 영암군 영암읍 오리정길 8',
     },
     {
         dutyName: '완도대성병원',
@@ -2429,6 +2777,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600032',
         lat: 34.31716999454396,
         lon: 126.73556371420688,
+        dutyAddr: '전라남도 완도군 완도읍 청해진동로 63',
     },
     {
         dutyName: '장성병원',
@@ -2436,6 +2785,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600035',
         lat: 35.305871659607845,
         lon: 126.78361958777766,
+        dutyAddr: '전라남도 장성군 장성읍 역전로 171',
     },
     {
         dutyName: ' 장흥종합병원',
@@ -2443,6 +2793,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600021',
         lat: 34.67726071666993,
         lon: 126.91093606650924,
+        dutyAddr: '전라남도 장흥군 장흥읍 흥성로 74',
     },
     {
         dutyName: '장흥우리병원',
@@ -2450,6 +2801,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600037',
         lat: 34.67838230801459,
         lon: 126.91109914454887,
+        dutyAddr: '전라남도 장흥군 장흥읍 흥성로 83',
     },
     {
         dutyName: '진도한국병원',
@@ -2457,6 +2809,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600040',
         lat: 34.482432541575456,
         lon: 126.26412429142383,
+        dutyAddr: '전라남도 진도군 진도읍 남문길 48',
     },
     {
         dutyName: '해남우리종합병원',
@@ -2464,6 +2817,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600077',
         lat: 34.58423738321411,
         lon: 126.64658297551144,
+        dutyAddr: '전라남도 해남군 옥천면 해남로 597',
     },
     {
         dutyName: ' 해남종합병원',
@@ -2471,6 +2825,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600009',
         lat: 34.571547222222215,
         lon: 126.61268333333334,
+        dutyAddr: '전라남도 해남군 해남읍 해남로 45',
     },
     {
         dutyName: '화순전남대학교병원',
@@ -2478,6 +2833,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2600001',
         lat: 35.0586707410237,
         lon: 127.002108292339,
+        dutyAddr: '전라남도 화순군 화순읍 서양로 322',
     },
     {
         dutyName: '고창병원',
@@ -2485,6 +2841,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500009',
         lat: 35.43645131091079,
         lon: 126.69331814963527,
+        dutyAddr: '전북특별자치도 고창군 고창읍 화신1길 9',
     },
     {
         dutyName: '전북특별자치도군산의료원',
@@ -2492,6 +2849,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500007',
         lat: 35.95497072788432,
         lon: 126.71189936455204,
+        dutyAddr: '전북특별자치도 군산시 의료원로 27 (지곡동,(지곡동, 군산의료원))',
     },
     {
         dutyName: '동군산병원',
@@ -2499,6 +2857,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500012',
         lat: 35.97740074466571,
         lon: 126.73719225835914,
+        dutyAddr: '전북특별자치도 군산시 조촌로 149 (조촌동)',
     },
     {
         dutyName: '김제우석병원',
@@ -2506,6 +2865,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500038',
         lat: 35.80673935689978,
         lon: 126.87969956139742,
+        dutyAddr: '전북특별자치도 김제시 서암4길 45 (서암동)',
     },
     {
         dutyName: '전북특별자치도남원의료원',
@@ -2513,6 +2873,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500004',
         lat: 35.43189945917936,
         lon: 127.40719103150715,
+        dutyAddr: '전북특별자치도 남원시 충정로 365 (고죽동)',
     },
     {
         dutyName: '무주군보건의료원',
@@ -2520,6 +2881,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2500019',
         lat: 36.00586316008286,
         lon: 127.67170265153939,
+        dutyAddr: '전북특별자치도 무주군 무주읍 한풍루로 413, 무주군보건의료원',
     },
     {
         dutyName: '부안성모병원',
@@ -2527,6 +2889,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500010',
         lat: 35.724815399252556,
         lon: 126.73452574138332,
+        dutyAddr: '전북특별자치도 부안군 부안읍 오정2길 24',
     },
     {
         dutyName: '순창군보건의료원',
@@ -2534,6 +2897,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2500021',
         lat: 35.36714953529629,
         lon: 127.14386670292174,
+        dutyAddr: '전북특별자치도 순창군 순창읍 교성로 135 (순창군보건의료원)',
     },
     {
         dutyName: '원광대학교병원',
@@ -2541,6 +2905,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500001',
         lat: 35.9642419612473,
         lon: 126.959306346821,
+        dutyAddr: '전북특별자치도 익산시 무왕로 895 (신동)',
     },
     {
         dutyName: '익산병원',
@@ -2548,6 +2913,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500011',
         lat: 35.96168123354797,
         lon: 126.96649966881398,
+        dutyAddr: '전북특별자치도 익산시 무왕로 969 (신동)',
     },
     {
         dutyName: '임실군보건의료원',
@@ -2555,6 +2921,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2500022',
         lat: 35.61249558187053,
         lon: 127.28697578028248,
+        dutyAddr: '전북특별자치도 임실군 임실읍 호국로 1680',
     },
     {
         dutyName: '장수군보건의료원',
@@ -2562,6 +2929,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2500020',
         lat: 35.654664903392614,
         lon: 127.52014287444382,
+        dutyAddr: '전북특별자치도 장수군 장수읍 장천로 247',
     },
     {
         dutyName: '전북대학교병원',
@@ -2569,6 +2937,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500002',
         lat: 35.84697279303408,
         lon: 127.1393674038135,
+        dutyAddr: '전북특별자치도 전주시 덕진구 건지로 20 (금암동)',
     },
     {
         dutyName: '대자인병원',
@@ -2576,6 +2945,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500056',
         lat: 35.84599245880299,
         lon: 127.153316348062,
+        dutyAddr: '전북특별자치도 전주시 덕진구 견훤로 390 (우아동3가,(우아동3가))',
     },
     {
         dutyName: '호성전주병원',
@@ -2583,6 +2953,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2501890',
         lat: 35.865528416459995,
         lon: 127.14790290638277,
+        dutyAddr: '전북특별자치도 전주시 덕진구 동부대로 895 (호성동1가)',
     },
     {
         dutyName: '예수병원',
@@ -2590,6 +2961,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500006',
         lat: 35.81440117465108,
         lon: 127.13325187439274,
+        dutyAddr: '전북특별자치도 전주시 완산구 서원로 365 (중화산동1가, 예수병원)',
     },
     {
         dutyName: '전주병원',
@@ -2597,6 +2969,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500005',
         lat: 35.81502660230338,
         lon: 127.1247991889436,
+        dutyAddr: '전북특별자치도 전주시 완산구 한두평3길 13 (중화산동2가, 전주병원)',
     },
     {
         dutyName: '정읍아산병원',
@@ -2604,6 +2977,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2500008',
         lat: 35.58899495218047,
         lon: 126.82346011194952,
+        dutyAddr: '전북특별자치도 정읍시 충정로 606-22 (용계동)',
     },
     {
         dutyName: '진안군의료원',
@@ -2611,6 +2985,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2502031',
         lat: 35.79518695884379,
         lon: 127.43207008323515,
+        dutyAddr: '전북특별자치도 진안군 진안읍 진무로 1145-0',
     },
     {
         dutyName: '제주특별자치도 서귀포의료원',
@@ -2618,6 +2993,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2900002',
         lat: 33.255354935811724,
         lon: 126.56420131670261,
+        dutyAddr: '제주특별자치도 서귀포시 장수로 47 &#40;동홍동&#41;',
     },
     {
         dutyName: '제주한라병원',
@@ -2625,6 +3001,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2900001',
         lat: 33.489946745300735,
         lon: 126.48507635686154,
+        dutyAddr: '제주특별자치도 제주시 도령로 65-  (연동, (연동))',
     },
     {
         dutyName: ' 한국병원',
@@ -2632,6 +3009,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2900003',
         lat: 33.500185921027,
         lon: 126.51698873048466,
+        dutyAddr: '제주특별자치도 제주시 서광로 193 (삼도일동)',
     },
     {
         dutyName: '제주대학교병원',
@@ -2639,6 +3017,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2900007',
         lat: 33.46727330825531,
         lon: 126.54525733713078,
+        dutyAddr: '제주특별자치도 제주시 아란13길 15-  (아라일동,제주대학교병원 (아라일동))',
     },
     {
         dutyName: '한마음병원',
@@ -2646,6 +3025,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2900005',
         lat: 33.4962612399279,
         lon: 126.54622454609037,
+        dutyAddr: '제주특별자치도 제주시 연신로 52   (이도이동)',
     },
     {
         dutyName: ' 중앙병원',
@@ -2653,6 +3033,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2900006',
         lat: 33.492346148279836,
         lon: 126.47058708143307,
+        dutyAddr: '제주특별자치도 제주시 월랑로 91-0 (이호이동,중앙병원)',
     },
     {
         dutyName: '충청남도공주의료원',
@@ -2660,6 +3041,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400010',
         lat: 36.45905455773722,
         lon: 127.10921562289595,
+        dutyAddr: '충청남도 공주시 무령로 77 (웅진동)',
     },
     {
         dutyName: '백제병원',
@@ -2667,6 +3049,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400009',
         lat: 36.19250243074026,
         lon: 127.09436976296006,
+        dutyAddr: '충청남도 논산시 시민로294번길 14 (취암동)',
     },
     {
         dutyName: '당진종합병원',
@@ -2674,6 +3057,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400008',
         lat: 36.90439755063778,
         lon: 126.68435813411776,
+        dutyAddr: '충청남도 당진시 반촌로 5-15 (시곡동)',
     },
     {
         dutyName: '보령아산병원',
@@ -2681,6 +3065,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400011',
         lat: 36.38113998244595,
         lon: 126.62282846665184,
+        dutyAddr: '충청남도 보령시 죽성로 136 (죽정동)',
     },
     {
         dutyName: '건양대학교부여병원',
@@ -2688,6 +3073,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400038',
         lat: 36.275554094438235,
         lon: 126.90169662482884,
+        dutyAddr: '충청남도 부여군 부여읍 계백로 200',
     },
     {
         dutyName: '서산중앙병원',
@@ -2695,6 +3081,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400003',
         lat: 36.78101237096687,
         lon: 126.50342177166652,
+        dutyAddr: '충청남도 서산시 수석산업로 5 (수석동)',
     },
     {
         dutyName: '충청남도서산의료원',
@@ -2702,6 +3089,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400006',
         lat: 36.77556877677842,
         lon: 126.46515725738563,
+        dutyAddr: '충청남도 서산시 중앙로 149 (석림동)',
     },
     {
         dutyName: '서해병원',
@@ -2709,6 +3097,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400044',
         lat: 36.08449428686221,
         lon: 126.6875810614244,
+        dutyAddr: '충청남도 서천군 서천읍 서천로 184',
     },
     {
         dutyName: '아산충무병원',
@@ -2716,6 +3105,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2402257',
         lat: 36.779292504897654,
         lon: 127.01994885495239,
+        dutyAddr: '충청남도 아산시 문화로 381 (모종동)',
     },
     {
         dutyName: '현대병원',
@@ -2723,6 +3113,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400039',
         lat: 36.78311829920936,
         lon: 127.00097027728451,
+        dutyAddr: '충청남도 아산시 시민로 388 (온천동)',
     },
     {
         dutyName: '예산종합병원',
@@ -2730,6 +3121,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400004',
         lat: 36.69111403683895,
         lon: 126.83810397105952,
+        dutyAddr: '충청남도 예산군 예산읍 금오대로 94',
     },
     {
         dutyName: '단국대학교병원',
@@ -2737,6 +3129,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400002',
         lat: 36.84295215169462,
         lon: 127.17327537305154,
+        dutyAddr: '충청남도 천안시 동남구 망향로 201 (안서동, 단국대학교의과대학부속병원)',
     },
     {
         dutyName: '순천향대학교천안병원',
@@ -2744,6 +3137,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400001',
         lat: 36.8023584971179,
         lon: 127.135666806479,
+        dutyAddr: '충청남도 천안시 동남구 순천향6길 31 (봉명동)',
     },
     {
         dutyName: '충청남도천안의료원',
@@ -2751,6 +3145,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400005',
         lat: 36.775359921186194,
         lon: 127.17992025598447,
+        dutyAddr: '충청남도 천안시 동남구 충절로 537 (삼룡동)',
     },
     {
         dutyName: '천안충무병원',
@@ -2758,6 +3153,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400012',
         lat: 36.79739687904163,
         lon: 127.13157820432319,
+        dutyAddr: '충청남도 천안시 서북구 다가말3길 8 (쌍용동)',
     },
     {
         dutyName: '청양군보건의료원',
@@ -2765,6 +3161,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2400032',
         lat: 36.45529646339589,
         lon: 126.80455836964052,
+        dutyAddr: '충청남도 청양군 청양읍 칠갑산로7길 54',
     },
     {
         dutyName: '태안군보건의료원',
@@ -2772,6 +3169,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'E2400033',
         lat: 36.75191402131483,
         lon: 126.32320735565844,
+        dutyAddr: '충청남도 태안군 태안읍 서해로 1952-16',
     },
     {
         dutyName: '충청남도홍성의료원',
@@ -2779,6 +3177,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2400007',
         lat: 36.59933992060475,
         lon: 126.67440672396913,
+        dutyAddr: '충청남도 홍성군 홍성읍 조양로 224',
     },
     {
         dutyName: '괴산성모병원',
@@ -2786,6 +3185,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300034',
         lat: 36.81544387632933,
         lon: 127.78424628538971,
+        dutyAddr: '충청북도 괴산군 괴산읍 임꺽정로 116-0 (괴산성모병원)',
     },
     {
         dutyName: '보은한양병원',
@@ -2793,6 +3193,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300017',
         lat: 36.48327155579628,
         lon: 127.71821043397682,
+        dutyAddr: '충청북도 보은군 보은읍 보은로 102',
     },
     {
         dutyName: '영동병원',
@@ -2800,6 +3201,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300030',
         lat: 36.1852328446,
         lon: 127.7808325647,
+        dutyAddr: '충청북도 영동군 영동읍 대학로 106',
     },
     {
         dutyName: '옥천성모병원',
@@ -2807,6 +3209,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300011',
         lat: 36.313345842294304,
         lon: 127.57197742757523,
+        dutyAddr: '충청북도 옥천군 옥천읍 성왕로 1195',
     },
     {
         dutyName: '명지병원',
@@ -2814,6 +3217,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300009',
         lat: 37.163005764289196,
         lon: 128.23405656001106,
+        dutyAddr: '충청북도 제천시 내토로 991-0 (고암동,의료법인명지의료재단명지병원)',
     },
     {
         dutyName: '제천서울병원',
@@ -2821,6 +3225,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300005',
         lat: 37.13857101389598,
         lon: 128.20613928597677,
+        dutyAddr: '충청북도 제천시 숭문로 57 (서부동)',
     },
     {
         dutyName: '중앙제일병원',
@@ -2828,6 +3233,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300013',
         lat: 36.858487476286044,
         lon: 127.44050791116805,
+        dutyAddr: '충청북도 진천군 진천읍 중앙북로 36',
     },
     {
         dutyName: '한국병원',
@@ -2835,6 +3241,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300007',
         lat: 36.61950588971749,
         lon: 127.49659485930336,
+        dutyAddr: '충청북도 청주시 상당구 단재로 106 (영운동)',
     },
     {
         dutyName: '효성병원',
@@ -2842,6 +3249,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300003',
         lat: 36.624556372628305,
         lon: 127.49558522201268,
+        dutyAddr: '충청북도 청주시 상당구 쇠내로 16 (금천동)',
     },
     {
         dutyName: '충북대학교병원',
@@ -2849,6 +3257,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300001',
         lat: 36.624166824834546,
         lon: 127.4614360502226,
+        dutyAddr: '충청북도 청주시 서원구 1순환로 776-0 (개신동,충북대학교병원)',
     },
     {
         dutyName: '충청북도 청주의료원',
@@ -2856,6 +3265,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300006',
         lat: 36.6401389722304,
         lon: 127.473087555201,
+        dutyAddr: '충청북도 청주시 서원구 흥덕로 48-0 (사직동,청주의료원)',
     },
     {
         dutyName: '청주성모병원',
@@ -2863,6 +3273,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300008',
         lat: 36.673801330174406,
         lon: 127.48546957073641,
+        dutyAddr: '충청북도 청주시 청원구 주성로 173-19 (주중동)',
     },
     {
         dutyName: '하나병원',
@@ -2870,6 +3281,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300002',
         lat: 36.623474045244464,
         lon: 127.43081864239413,
+        dutyAddr: '충청북도 청주시 흥덕구 2순환로 1262 (가경동)',
     },
     {
         dutyName: '베스티안병원',
@@ -2877,6 +3289,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2302011',
         lat: 36.6364279047,
         lon: 127.3216412104,
+        dutyAddr: '충청북도 청주시 흥덕구 오송읍 오송생명1로 191-0',
     },
     {
         dutyName: '건국대학교충주병원',
@@ -2884,6 +3297,7 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300010',
         lat: 36.97897509717851,
         lon: 127.92863660615964,
+        dutyAddr: '충청북도 충주시 국원대로 82 (교현동)',
     },
     {
         dutyName: '충청북도충주의료원',
@@ -2891,5 +3305,6 @@ export const eroomInfoList: EroomInfo[] = [
         hpid: 'A2300004',
         lat: 36.97956732195825,
         lon: 127.9703586011334,
+        dutyAddr: '충청북도 충주시 안림로 239-50 (안림동)',
     },
 ];
