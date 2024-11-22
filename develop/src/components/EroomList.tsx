@@ -70,7 +70,16 @@ const DistanceBtn = styled.div<{ active: string }>`
     color: white;
 `;
 
-const NowMaxDistance = styled.div``;
+const RefreshBtn = styled.div`
+    background-color: #2948ee;
+    color: white;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+`;
 
 function EroomList({ userLocation }: LocationProps) {
     const [maxDistance, setMaxDistance] = useState(5);
@@ -153,7 +162,7 @@ function EroomList({ userLocation }: LocationProps) {
                 </DistanceBtn>
             </DistanceBtnContainer>
             <div>데이터 업데이트 시각 : {requestTime}</div>
-            <div onClick={refetch}>응급실 리스트 새로고침</div>
+            <RefreshBtn onClick={refetch}>응급실 리스트 새로고침</RefreshBtn>
 
             {filtedEroomList.map((e) => (
                 <EroomItem key={e.hpid} eroomInfo={e} userLocation={userLocation} />
