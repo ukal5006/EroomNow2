@@ -24,7 +24,10 @@ function useAxios<T>({ url, headers }: UseAxiosProps) {
             setError(null); // 성공하면 에러 상태 초기화
 
             // 요청 시간 기록
-            const currentTime = new Date().toISOString().replace('T', ' ').slice(0, 19); // "xxxx-xx-xx xx:xx:xx" 형식
+            const currentTime = new Date(new Date().getTime() + 9 * 60 * 60 * 1000) // UTC+9로 변환
+                .toISOString()
+                .replace('T', ' ')
+                .slice(0, 19); // "xxxx-xx-xx xx:xx:xx" 형식
             setRequestTime(currentTime);
         } catch (err) {
             const axiosError = err as AxiosError;
