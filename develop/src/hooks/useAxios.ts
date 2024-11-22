@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 
 interface UseAxiosProps {
@@ -8,32 +8,37 @@ interface UseAxiosProps {
 
 function useAxios<T>({ url, headers }: UseAxiosProps) {
     const [data, setData] = useState<T | null>(null);
-    const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+    const [requestTime, setRequestTime] = useState<string | null>(null); // 요청 시간을 저장할 상태 추가
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const config: AxiosRequestConfig = {
-                    url,
-                    headers,
-                    method: 'GET',
-                };
+    const fetchData = useCallback(async () => {
+        try {
+            const config: AxiosRequestConfig = {
+                url,
+                headers,
+                method: 'GET',
+            };
 
-                const response = await axios(config);
-                setData(response.data);
-            } catch (err) {
-                const axiosError = err as AxiosError;
-                setError(axiosError.message);
-            } finally {
-                setLoading(false);
-            }
-        };
+            const response = await axios(config);
+            setData(response.data);
+            setError(null); // 성공하면 에러 상태 초기화
 
-        fetchData();
+            // 요청 시간 기록
+            const currentTime = new Date().toISOString().replace('T', ' ').slice(0, 19); // "xxxx-xx-xx xx:xx:xx" 형식
+            setRequestTime(currentTime);
+        } catch (err) {
+            const axiosError = err as AxiosError;
+            setError(axiosError.message);
+            setData(null); // 에러 발생 시 데이터 초기화
+            setRequestTime(null); // 에러 발생 시 요청 시간 초기화
+        }
     }, [url, headers]);
 
-    return { data, loading, error };
+    useEffect(() => {
+        fetchData(); // 컴포넌트 마운트 시 데이터 fetch
+    }, [fetchData]);
+
+    return { data, error, requestTime, refetch: fetchData }; // 요청 시간도 반환
 }
 
 export default useAxios;
