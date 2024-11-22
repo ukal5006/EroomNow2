@@ -26,7 +26,7 @@ function KakaoMap({ userLocation, eroomInfo }: KakaoMapProps) {
                     (userLocation.latitude + eroomInfo.lat) / 2,
                     (userLocation.longitude + eroomInfo.lon) / 2
                 ),
-                level: 6,
+                level: 8,
             };
 
             const map = new window.kakao.maps.Map(container, options);
