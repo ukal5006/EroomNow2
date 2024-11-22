@@ -35,11 +35,13 @@ function useAxios<T>({ url, headers }: UseAxiosProps) {
             setData(null); // 에러 발생 시 데이터 초기화
             setRequestTime(null); // 에러 발생 시 요청 시간 초기화
         }
-    }, [url, headers]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     useEffect(() => {
         fetchData(); // 컴포넌트 마운트 시 데이터 fetch
-    }, [fetchData]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return { data, error, requestTime, refetch: fetchData }; // 요청 시간도 반환
 }

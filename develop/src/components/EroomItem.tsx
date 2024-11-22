@@ -1,13 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { NowEroomInfo } from './EroomList';
 import { formatDateTime } from '../tools/formatDateTime';
 import KakaoMap from './KakaoMap';
 import { UserLocation } from '../App';
+import useAxios from '../hooks/useAxios';
+import { KAKAOMOBILITY } from '../constants/api';
 
 interface EroomItemProps {
     eroomInfo: NowEroomInfo;
     userLocation: UserLocation;
+}
+
+interface KakaoMobilityResponse {
+    routes: {
+        summary: {
+            duration: number; // 여기에 필요한 속성 추가
+            fare: {
+                taxi: number;
+                toll: number;
+            };
+        };
+    }[];
 }
 
 const EroomItemContainer = styled.div`
@@ -142,6 +156,14 @@ const UpdateTime = styled.div`
 `;
 
 function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
+    const [duration, setDuration] = useState<null | number>(null);
+    const [taxi, setTaxi] = useState<null | number>(null);
+    const [toll, setToll] = useState<null | number>(null);
+    const { data } = useAxios<KakaoMobilityResponse>({
+        url: KAKAOMOBILITY({ userLocation, eroomLocation: { lat: eroomInfo.lat, lon: eroomInfo.lon } }),
+        headers: { Authorization: `KakaoAK ${process.env.REACT_APP_KAKAO_MOBILITY_KEY!}` },
+    });
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = () => {
@@ -164,6 +186,17 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
             document.body.style.overflow = 'unset'; // 컴포넌트 언마운트 시 스크롤 복구
         };
     }, [isModalOpen]);
+
+    useEffect(() => {
+        if (data) {
+            console.log(data.routes[0].summary.duration);
+            console.log(data.routes[0].summary.fare.taxi);
+            console.log(data.routes[0].summary.fare.toll);
+            setDuration(data.routes[0].summary.duration);
+            setTaxi(data.routes[0].summary.fare.taxi);
+            setToll(data.routes[0].summary.fare.toll);
+        }
+    }, [data]);
 
     return (
         <>
@@ -191,6 +224,9 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
                                 <Name>{eroomInfo.dutyName}</Name>
                                 <Address>{eroomInfo.dutyAddr}</Address>
                                 <Distance>{Math.round(eroomInfo.distance * 100) / 100}km</Distance>
+                                <div>시간 : {duration}</div>
+                                <div>택시비 : {taxi}</div>
+                                <div>톨비 : {toll}</div>
                                 <Tel>
                                     전화번호 : {eroomInfo.dutyTel3}{' '}
                                     <CallBtn href={`tel:${eroomInfo.dutyTel3}`}>📞</CallBtn>
