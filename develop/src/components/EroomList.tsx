@@ -52,12 +52,36 @@ const EroomListWrapper = styled.div`
     width: 350px;
 `;
 
+const DistanceBtnContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+`;
+
+const DistanceBtn = styled.div<{ active: string }>`
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: ${({ active }) => (active === 'true' ? 'green' : 'gray')}; /* 활성화된 버튼 색상 변경 */
+    color: white;
+`;
+
+const NowMaxDistance = styled.div``;
+
 function EroomList({ userLocation }: LocationProps) {
-    const [maxDistance, setMaxDistance] = useState(20);
+    const [maxDistance, setMaxDistance] = useState(5);
     const [distanceEroomList, setDistanceEroomList] = useState<null | DistanceEroomInfo[]>(null);
     const [nowEroomList, setNowEroomList] = useState<null | NowEroomInfo[]>(null);
     const [filtedEroomList, setFiltedEroomList] = useState<null | NowEroomInfo[]>(null);
-    const { data, error } = useAxios<EroomResponse>({ url: EROOMLIST });
+    const { data, error, requestTime, refetch } = useAxios<EroomResponse>({ url: EROOMLIST });
+
+    const distanceBtnHandler = (distance: 5 | 10 | 15) => {
+        setMaxDistance(distance);
+    };
 
     // 응급실 기본 정보에 사용자와의 거리 추가
     useEffect(() => {
@@ -117,6 +141,20 @@ function EroomList({ userLocation }: LocationProps) {
         </LoaderContainer>
     ) : (
         <EroomListWrapper>
+            <DistanceBtnContainer>
+                <DistanceBtn active={(maxDistance === 5).toString()} onClick={() => distanceBtnHandler(5)}>
+                    5km
+                </DistanceBtn>
+                <DistanceBtn active={(maxDistance === 10).toString()} onClick={() => distanceBtnHandler(10)}>
+                    10km
+                </DistanceBtn>
+                <DistanceBtn active={(maxDistance === 15).toString()} onClick={() => distanceBtnHandler(15)}>
+                    15km
+                </DistanceBtn>
+            </DistanceBtnContainer>
+            <div>데이터 업데이트 시각 : {requestTime}</div>
+            <div onClick={refetch}>응급실 리스트 새로고침</div>
+
             {filtedEroomList.map((e) => (
                 <EroomItem key={e.hpid} eroomInfo={e} userLocation={userLocation} />
             ))}
