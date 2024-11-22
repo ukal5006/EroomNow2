@@ -126,7 +126,7 @@ const ModalContent = styled.div`
 `;
 
 const ContentContext = styled.div`
-    font-size: 18px;
+    font-size: 16px;
     & > div {
         margin-top: 10px;
     }
@@ -144,11 +144,26 @@ const Address = styled.div`
 
 const Distance = styled.div``;
 
-const Count = styled.div``;
+const Duration = styled.div``;
+
+const CostContainer = styled.div`
+    display: flex;
+    align-items: end;
+`;
+
+const Taxi = styled.div`
+    margin-right: 10px;
+`;
+
+const Toll = styled.div`
+    font-size: 12px;
+`;
 
 const Tel = styled.div``;
 
 const CallBtn = styled.a``;
+
+const Count = styled.div``;
 
 const UpdateTime = styled.div`
     font-size: 12px;
@@ -224,9 +239,11 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
                                 <Name>{eroomInfo.dutyName}</Name>
                                 <Address>{eroomInfo.dutyAddr}</Address>
                                 <Distance>{Math.round(eroomInfo.distance * 100) / 100}km</Distance>
-                                <div>시간 : {duration}</div>
-                                <div>택시비 : {taxi}</div>
-                                <div>톨비 : {toll}</div>
+                                <Duration>예상 소요 시간 : {duration ? Math.round(duration / 60) : '0'}분</Duration>
+                                <CostContainer>
+                                    {taxi && <Taxi>예상 택시비: {taxi}원</Taxi>}
+                                    {toll && toll !== 0 ? <Toll>톨비 {toll}원 포함</Toll> : null}
+                                </CostContainer>
                                 <Tel>
                                     전화번호 : {eroomInfo.dutyTel3}{' '}
                                     <CallBtn href={`tel:${eroomInfo.dutyTel3}`}>📞</CallBtn>
