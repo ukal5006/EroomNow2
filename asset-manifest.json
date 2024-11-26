@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/eroom-now/static/js/main.38453832.js",
+    "main.js": "/eroom-now/static/js/main.bb14f559.js",
     "static/media/eroomMarker.png": "/eroom-now/static/media/eroomMarker.215352a2fb96d45bb1d2.png",
     "index.html": "/eroom-now/index.html",
-    "main.38453832.js.map": "/eroom-now/static/js/main.38453832.js.map"
+    "main.bb14f559.js.map": "/eroom-now/static/js/main.bb14f559.js.map"
   },
   "entrypoints": [
-    "static/js/main.38453832.js"
+    "static/js/main.bb14f559.js"
   ]
 }
