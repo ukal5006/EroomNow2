@@ -3,6 +3,7 @@ import { UserLocation } from '../App';
 import styled from 'styled-components';
 import userMarker from '../assets/userMarker.png'; // 사용자 이미지 경로
 import eroomMarker from '../assets/eroomMarker.png'; // Eroom 이미지 경로
+import { distance } from '../tools/distance';
 
 interface KakaoMapProps {
     userLocation: UserLocation;
@@ -26,7 +27,7 @@ function KakaoMap({ userLocation, eroomInfo }: KakaoMapProps) {
                     (userLocation.latitude + eroomInfo.lat) / 2,
                     (userLocation.longitude + eroomInfo.lon) / 2
                 ),
-                level: 8,
+                level: eroomInfo.distance < 3 ? 6 : eroomInfo.distance < 6.5 ? 7 : 9,
             };
 
             const map = new window.kakao.maps.Map(container, options);
