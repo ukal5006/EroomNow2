@@ -3,7 +3,6 @@ import { UserLocation } from '../App';
 import styled from 'styled-components';
 import userMarker from '../assets/userMarker.png'; // 사용자 이미지 경로
 import eroomMarker from '../assets/eroomMarker.png'; // Eroom 이미지 경로
-import { distance } from '../tools/distance';
 
 interface KakaoMapProps {
     userLocation: UserLocation;
