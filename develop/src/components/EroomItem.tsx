@@ -208,9 +208,6 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
 
     useEffect(() => {
         if (data) {
-            console.log(data.routes[0].summary.duration);
-            console.log(data.routes[0].summary.fare.taxi);
-            console.log(data.routes[0].summary.fare.toll);
             setDuration(data.routes[0].summary.duration);
             setTaxi(data.routes[0].summary.fare.taxi);
             setToll(data.routes[0].summary.fare.toll);
