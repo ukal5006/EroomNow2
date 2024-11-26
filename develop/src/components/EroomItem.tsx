@@ -50,7 +50,7 @@ const EroomCount = styled.div<{ hvec: number }>`
     border-radius: 10px;
 
     ${(props) => {
-        if (props.hvec === 0) {
+        if (props.hvec <= 0) {
             return css`
                 background-color: gray;
             `;
