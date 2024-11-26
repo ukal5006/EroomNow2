@@ -15,7 +15,7 @@ interface EroomItemProps {
 interface KakaoMobilityResponse {
     routes: {
         summary: {
-            duration: number; // 여기에 필요한 속성 추가
+            duration: number;
             fare: {
                 taxi: number;
                 toll: number;
@@ -32,7 +32,7 @@ const EroomItemContainer = styled.div`
     padding: 0px 10px;
     box-sizing: border-box;
     border-radius: 15px;
-    cursor: pointer; /* 클릭할 수 있음을 나타내기 위해 커서 변경 */
+    cursor: pointer;
     margin-top: 10px;
 `;
 
@@ -241,15 +241,17 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
                                 <Distance>{Math.round(eroomInfo.distance * 100) / 100}km</Distance>
                                 <Duration>예상 소요 시간 : {duration ? Math.round(duration / 60) : '0'}분</Duration>
                                 <CostContainer>
-                                    {taxi && <Taxi>예상 택시비: {taxi}원</Taxi>}
-                                    {toll && toll !== 0 ? <Toll>톨비 {toll}원 포함</Toll> : null}
+                                    {taxi && <Taxi>예상 택시비: {taxi.toLocaleString()}원</Taxi>}
+                                    {toll && toll !== 0 ? <Toll>톨비 {toll.toLocaleString()}원 포함</Toll> : null}
                                 </CostContainer>
                                 <Tel>
                                     전화번호 : {eroomInfo.dutyTel3}{' '}
                                     <CallBtn href={`tel:${eroomInfo.dutyTel3}`}>📞</CallBtn>
                                 </Tel>
                                 <Count>가용 침상 수 : {eroomInfo.hvec}</Count>
-                                <UpdateTime>업데이트 시간 : {formatDateTime(eroomInfo.hvidate.toString())}</UpdateTime>
+                                <UpdateTime>
+                                    데이터 업데이트 시간 : {formatDateTime(eroomInfo.hvidate.toString())}
+                                </UpdateTime>
                             </ContentContext>
                         </ModalContent>
                     </ModalWrapper>
