@@ -189,6 +189,10 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
         setIsModalOpen(false);
     };
 
+    const handleContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        e.stopPropagation(); // 모달 내부 클릭 시 이벤트 전파 방지
+    };
+
     // 모달 열림 상태에 따라 body 스크롤 방지
     useEffect(() => {
         if (isModalOpen) {
@@ -222,8 +226,8 @@ function EroomItem({ eroomInfo, userLocation }: EroomItemProps) {
             </EroomItemContainer>
 
             {isModalOpen && (
-                <ModalOverlay>
-                    <ModalWrapper>
+                <ModalOverlay onClick={handleCloseModal}>
+                    <ModalWrapper onClick={handleContentClick}>
                         <CloseButton onClick={handleCloseModal}>x</CloseButton>
                         <ModalContent>
                             <KakaoMap
